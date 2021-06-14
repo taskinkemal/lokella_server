@@ -1,0 +1,4185 @@
+{
+  "Common.dll": {
+    "/Users/kemaltaskin/Projects/Quiz/Common/AppSettings.cs": {
+      "Common.AppSettings": {
+        "System.String Common.AppSettings::get_ConnectionString()": {
+          "Lines": {
+            "11": 0
+          },
+          "Branches": []
+        },
+        "System.String Common.AppSettings::get_ApiKey()": {
+          "Lines": {
+            "16": 0
+          },
+          "Branches": []
+        },
+        "Common.EmailSettings Common.AppSettings::get_Email()": {
+          "Lines": {
+            "21": 3
+          },
+          "Branches": []
+        }
+      }
+    },
+    "/Users/kemaltaskin/Projects/Quiz/Common/AuthenticationHelper.cs": {
+      "Common.AuthenticationHelper": {
+        "System.Byte[] Common.AuthenticationHelper::EncryptPassword(System.String)": {
+          "Lines": {
+            "22": 236,
+            "25": 236,
+            "26": 236,
+            "27": 236,
+            "28": 236,
+            "30": 236,
+            "31": 236
+          },
+          "Branches": []
+        },
+        "System.String Common.AuthenticationHelper::GenerateToken(System.Int32)": {
+          "Lines": {
+            "39": 8,
+            "40": 8,
+            "41": 8
+          },
+          "Branches": []
+        },
+        "System.String Common.AuthenticationHelper::GenerateRandomString(System.Int32)": {
+          "Lines": {
+            "49": 64,
+            "50": 64,
+            "51": 20608,
+            "52": 10240,
+            "54": 64,
+            "55": 64
+          },
+          "Branches": [
+            {
+              "Line": 51,
+              "Offset": 58,
+              "EndOffset": 11,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 10240
+            },
+            {
+              "Line": 51,
+              "Offset": 58,
+              "EndOffset": 60,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 64
+            }
+          ]
+        },
+        "System.Boolean Common.AuthenticationHelper::CompareByteArrays(System.Byte[],System.Byte[])": {
+          "Lines": {
+            "64": 17,
+            "65": 17,
+            "66": 0,
+            "67": 0,
+            "70": 17,
+            "72": 1954,
+            "73": 962,
+            "74": 962,
+            "76": 962,
+            "77": 2,
+            "78": 2,
+            "80": 960,
+            "82": 17,
+            "83": 17
+          },
+          "Branches": [
+            {
+              "Line": 65,
+              "Offset": 2,
+              "EndOffset": 4,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 17
+            },
+            {
+              "Line": 65,
+              "Offset": 5,
+              "EndOffset": 7,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 17
+            },
+            {
+              "Line": 65,
+              "Offset": 2,
+              "EndOffset": 20,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            },
+            {
+              "Line": 65,
+              "Offset": 5,
+              "EndOffset": 20,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 0
+            },
+            {
+              "Line": 65,
+              "Offset": 23,
+              "EndOffset": 25,
+              "Path": 0,
+              "Ordinal": 4,
+              "Hits": 0
+            },
+            {
+              "Line": 65,
+              "Offset": 23,
+              "EndOffset": 30,
+              "Path": 1,
+              "Ordinal": 5,
+              "Hits": 17
+            },
+            {
+              "Line": 72,
+              "Offset": 74,
+              "EndOffset": 36,
+              "Path": 1,
+              "Ordinal": 9,
+              "Hits": 962
+            },
+            {
+              "Line": 76,
+              "Offset": 54,
+              "EndOffset": 56,
+              "Path": 0,
+              "Ordinal": 6,
+              "Hits": 2
+            },
+            {
+              "Line": 76,
+              "Offset": 54,
+              "EndOffset": 59,
+              "Path": 1,
+              "Ordinal": 7,
+              "Hits": 960
+            },
+            {
+              "Line": 72,
+              "Offset": 74,
+              "EndOffset": 76,
+              "Path": 0,
+              "Ordinal": 8,
+              "Hits": 17
+            }
+          ]
+        },
+        "System.Void Common.AuthenticationHelper::.cctor()": {
+          "Lines": {
+            "14": 3
+          },
+          "Branches": []
+        }
+      }
+    },
+    "/Users/kemaltaskin/Projects/Quiz/Common/Convertor.cs": {
+      "Common.Convertor": {
+        "System.String Common.Convertor::ToString(System.Object,System.String)": {
+          "Lines": {
+            "17": 10,
+            "18": 10,
+            "19": 10
+          },
+          "Branches": [
+            {
+              "Line": 18,
+              "Offset": 2,
+              "EndOffset": 4,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 9
+            },
+            {
+              "Line": 18,
+              "Offset": 2,
+              "EndOffset": 12,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 2
+            },
+            {
+              "Line": 18,
+              "Offset": 10,
+              "EndOffset": 12,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 2
+            },
+            {
+              "Line": 18,
+              "Offset": 10,
+              "EndOffset": 15,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 8
+            }
+          ]
+        }
+      }
+    },
+    "/Users/kemaltaskin/Projects/Quiz/Common/EmailSettings.cs": {
+      "Common.EmailSettings": {
+        "System.String Common.EmailSettings::get_Host()": {
+          "Lines": {
+            "11": 2
+          },
+          "Branches": []
+        },
+        "System.String Common.EmailSettings::get_From()": {
+          "Lines": {
+            "16": 0
+          },
+          "Branches": []
+        },
+        "System.String Common.EmailSettings::get_User()": {
+          "Lines": {
+            "21": 2
+          },
+          "Branches": []
+        },
+        "System.String Common.EmailSettings::get_Password()": {
+          "Lines": {
+            "26": 2
+          },
+          "Branches": []
+        }
+      }
+    },
+    "/Users/kemaltaskin/Projects/Quiz/Common/GenericWrapper.cs": {
+      "Common.GenericWrapper`1": {
+        "T Common.GenericWrapper`1::get_Value()": {
+          "Lines": {
+            "17": 16
+          },
+          "Branches": []
+        },
+        "Common.GenericWrapper`1<T> Common.GenericWrapper`1::Wrap(T)": {
+          "Lines": {
+            "25": 8,
+            "26": 8,
+            "27": 8,
+            "28": 8,
+            "29": 8,
+            "30": 8
+          },
+          "Branches": []
+        }
+      }
+    },
+    "/Users/kemaltaskin/Projects/Quiz/Common/HttpErrorMessage.cs": {
+      "Common.HttpErrorMessage": {
+        "System.String Common.HttpErrorMessage::get_Code()": {
+          "Lines": {
+            "11": 6
+          },
+          "Branches": []
+        },
+        "System.Void Common.HttpErrorMessage::.ctor(System.String)": {
+          "Lines": {
+            "17": 4,
+            "18": 4,
+            "19": 4,
+            "20": 4
+          },
+          "Branches": []
+        }
+      }
+    },
+    "/Users/kemaltaskin/Projects/Quiz/Common/LogParameters.cs": {
+      "Common.LogParameters": {
+        "System.Int32 Common.LogParameters::get_CategoryId()": {
+          "Lines": {
+            "11": 8
+          },
+          "Branches": []
+        }
+      }
+    },
+    "/Users/kemaltaskin/Projects/Quiz/Common/Implementations/EmailManager.cs": {
+      "Common.Implementations.EmailManager": {
+        "Common.EmailSettings Common.Implementations.EmailManager::get_Settings()": {
+          "Lines": {
+            "14": 4
+          },
+          "Branches": []
+        },
+        "System.Void Common.Implementations.EmailManager::Send(System.String,System.String,System.String)": {
+          "Lines": {
+            "35": 0,
+            "36": 0,
+            "37": 0,
+            "38": 0
+          },
+          "Branches": []
+        },
+        "System.Net.Mail.MailMessage Common.Implementations.EmailManager::CreateMailMessage(System.String,System.String,System.String,System.String)": {
+          "Lines": {
+            "41": 1,
+            "42": 1,
+            "43": 1,
+            "44": 1,
+            "45": 1,
+            "46": 1,
+            "47": 1,
+            "48": 1,
+            "50": 1,
+            "52": 1,
+            "53": 1
+          },
+          "Branches": []
+        },
+        "System.Net.Mail.SmtpClient Common.Implementations.EmailManager::CreateSmtpClient(System.String,System.String,System.String)": {
+          "Lines": {
+            "56": 2,
+            "57": 2,
+            "58": 2,
+            "59": 2,
+            "60": 2,
+            "61": 2,
+            "62": 2
+          },
+          "Branches": []
+        },
+        "System.Void Common.Implementations.EmailManager::.ctor(Microsoft.Extensions.Options.IOptions`1<Common.AppSettings>)": {
+          "Lines": {
+            "22": 1,
+            "23": 1,
+            "24": 1,
+            "25": 1,
+            "26": 1
+          },
+          "Branches": []
+        }
+      }
+    },
+    "/Users/kemaltaskin/Projects/Quiz/Common/Implementations/LogAdapter.cs": {
+      "Common.Implementations.LogAdapter": {
+        "System.Void Common.Implementations.LogAdapter::Write(Serilog.Events.LogEventLevel,System.Exception,System.String,System.Object[])": {
+          "Lines": {
+            "34": 0,
+            "35": 0,
+            "36": 0
+          },
+          "Branches": []
+        },
+        "System.Void Common.Implementations.LogAdapter::.ctor(Microsoft.Extensions.Configuration.IConfiguration)": {
+          "Lines": {
+            "20": 0,
+            "21": 0,
+            "22": 0,
+            "23": 0,
+            "24": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "/Users/kemaltaskin/Projects/Quiz/Common/Implementations/LogManager.cs": {
+      "Common.Implementations.LogManager": {
+        "System.Void Common.Implementations.LogManager::AddLog(Common.LogCategory,System.String,Serilog.Events.LogEventLevel,System.Object[])": {
+          "Lines": {
+            "32": 3,
+            "33": 3,
+            "34": 3
+          },
+          "Branches": []
+        },
+        "System.Void Common.Implementations.LogManager::AddLog(Common.LogCategory,System.Exception,System.Object[])": {
+          "Lines": {
+            "43": 1,
+            "44": 1,
+            "45": 1
+          },
+          "Branches": []
+        },
+        "System.Void Common.Implementations.LogManager::AddLog(Common.LogCategory,System.Exception,System.String,Serilog.Events.LogEventLevel,System.Object[])": {
+          "Lines": {
+            "56": 4,
+            "57": 4,
+            "59": 4,
+            "60": 4,
+            "62": 4,
+            "63": 4,
+            "65": 4,
+            "66": 4
+          },
+          "Branches": [
+            {
+              "Line": 59,
+              "Offset": 10,
+              "EndOffset": 12,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 1
+            },
+            {
+              "Line": 59,
+              "Offset": 10,
+              "EndOffset": 18,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 4
+            }
+          ]
+        },
+        "Common.LogParameters Common.Implementations.LogManager::CreateLogParameters(Common.LogCategory)": {
+          "Lines": {
+            "69": 4,
+            "70": 4,
+            "71": 4,
+            "72": 4,
+            "73": 4,
+            "74": 4
+          },
+          "Branches": []
+        },
+        "System.Void Common.Implementations.LogManager::.ctor(Common.Interfaces.ILogAdapter)": {
+          "Lines": {
+            "19": 4,
+            "20": 4,
+            "21": 4,
+            "22": 4
+          },
+          "Branches": []
+        }
+      }
+    }
+  },
+  "Models.dll": {
+    "/Users/kemaltaskin/Projects/Quiz/Models/TransferObjects/Answer.cs": {
+      "Models.TransferObjects.Answer": {
+        "System.Int32 Models.TransferObjects.Answer::get_TimeSpent()": {
+          "Lines": {
+            "13": 0
+          },
+          "Branches": []
+        },
+        "System.Int32 Models.TransferObjects.Answer::get_QuestionId()": {
+          "Lines": {
+            "18": 0
+          },
+          "Branches": []
+        },
+        "System.Collections.Generic.IEnumerable`1<System.Int32> Models.TransferObjects.Answer::get_Options()": {
+          "Lines": {
+            "23": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "/Users/kemaltaskin/Projects/Quiz/Models/TransferObjects/AuthToken.cs": {
+      "Models.TransferObjects.AuthToken": {
+        "System.String Models.TransferObjects.AuthToken::get_Token()": {
+          "Lines": {
+            "16": 24
+          },
+          "Branches": []
+        },
+        "System.Boolean Models.TransferObjects.AuthToken::get_IsVerified()": {
+          "Lines": {
+            "21": 20
+          },
+          "Branches": []
+        },
+        "System.DateTime Models.TransferObjects.AuthToken::get_ValidUntil()": {
+          "Lines": {
+            "27": 0
+          },
+          "Branches": []
+        },
+        "System.Int32 Models.TransferObjects.AuthToken::get_UserId()": {
+          "Lines": {
+            "32": 20
+          },
+          "Branches": []
+        }
+      }
+    },
+    "/Users/kemaltaskin/Projects/Quiz/Models/TransferObjects/CreateAttemptResponse.cs": {
+      "Models.TransferObjects.CreateAttemptResponse": {
+        "Models.TransferObjects.CreateAttemptResult Models.TransferObjects.CreateAttemptResponse::get_Result()": {
+          "Lines": {
+            "13": 24
+          },
+          "Branches": []
+        },
+        "Models.DbModels.QuizAttempt Models.TransferObjects.CreateAttemptResponse::get_Attempt()": {
+          "Lines": {
+            "18": 18
+          },
+          "Branches": []
+        }
+      }
+    },
+    "/Users/kemaltaskin/Projects/Quiz/Models/TransferObjects/EmailRequest.cs": {
+      "Models.TransferObjects.EmailRequest": {
+        "System.String Models.TransferObjects.EmailRequest::get_Email()": {
+          "Lines": {
+            "11": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "/Users/kemaltaskin/Projects/Quiz/Models/TransferObjects/GenericManagerResponse.cs": {
+      "Models.TransferObjects.GenericManagerResponse`2": {
+        "TE Models.TransferObjects.GenericManagerResponse`2::get_Response()": {
+          "Lines": {
+            "13": 6
+          },
+          "Branches": []
+        },
+        "T Models.TransferObjects.GenericManagerResponse`2::get_Value()": {
+          "Lines": {
+            "18": 0
+          },
+          "Branches": []
+        },
+        "System.Void Models.TransferObjects.GenericManagerResponse`2::.ctor(TE,T)": {
+          "Lines": {
+            "25": 6,
+            "26": 6,
+            "27": 6,
+            "28": 6,
+            "29": 6
+          },
+          "Branches": []
+        }
+      }
+    },
+    "/Users/kemaltaskin/Projects/Quiz/Models/TransferObjects/OneTimeTokenRequest.cs": {
+      "Models.TransferObjects.OneTimeTokenRequest": {
+        "System.String Models.TransferObjects.OneTimeTokenRequest::get_Token()": {
+          "Lines": {
+            "11": 20
+          },
+          "Branches": []
+        },
+        "System.String Models.TransferObjects.OneTimeTokenRequest::get_DeviceId()": {
+          "Lines": {
+            "16": 12
+          },
+          "Branches": []
+        }
+      }
+    },
+    "/Users/kemaltaskin/Projects/Quiz/Models/TransferObjects/PasswordChangeRequest.cs": {
+      "Models.TransferObjects.PasswordChangeRequest": {
+        "System.String Models.TransferObjects.PasswordChangeRequest::get_Password()": {
+          "Lines": {
+            "11": 0
+          },
+          "Branches": []
+        },
+        "System.String Models.TransferObjects.PasswordChangeRequest::get_DeviceId()": {
+          "Lines": {
+            "16": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "/Users/kemaltaskin/Projects/Quiz/Models/TransferObjects/PasswordChangeRequestWithToken.cs": {
+      "Models.TransferObjects.PasswordChangeRequestWithToken": {
+        "System.String Models.TransferObjects.PasswordChangeRequestWithToken::get_Password()": {
+          "Lines": {
+            "11": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "/Users/kemaltaskin/Projects/Quiz/Models/TransferObjects/PasswordCriteria.cs": {
+      "Models.TransferObjects.PasswordCriteria": {
+        "System.Int32 Models.TransferObjects.PasswordCriteria::get_MinimumLength()": {
+          "Lines": {
+            "13": 0
+          },
+          "Branches": []
+        },
+        "System.Int32 Models.TransferObjects.PasswordCriteria::get_MinimumAlphabetic()": {
+          "Lines": {
+            "18": 0
+          },
+          "Branches": []
+        },
+        "System.Int32 Models.TransferObjects.PasswordCriteria::get_MinimumNumeric()": {
+          "Lines": {
+            "23": 0
+          },
+          "Branches": []
+        },
+        "System.Boolean Models.TransferObjects.PasswordCriteria::IsValid(System.String)": {
+          "Lines": {
+            "31": 128,
+            "32": 128,
+            "33": 0,
+            "34": 0,
+            "37": 128,
+            "39": 128,
+            "40": 4,
+            "41": 4,
+            "44": 124,
+            "45": 0,
+            "46": 0,
+            "50": 124,
+            "51": 0,
+            "52": 0,
+            "55": 124,
+            "56": 128
+          },
+          "Branches": [
+            {
+              "Line": 32,
+              "Offset": 9,
+              "EndOffset": 11,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 32,
+              "Offset": 9,
+              "EndOffset": 16,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 128
+            },
+            {
+              "Line": 39,
+              "Offset": 38,
+              "EndOffset": 40,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 4
+            },
+            {
+              "Line": 39,
+              "Offset": 38,
+              "EndOffset": 45,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 124
+            },
+            {
+              "Line": 44,
+              "Offset": 75,
+              "EndOffset": 77,
+              "Path": 0,
+              "Ordinal": 4,
+              "Hits": 0
+            },
+            {
+              "Line": 44,
+              "Offset": 75,
+              "EndOffset": 82,
+              "Path": 1,
+              "Ordinal": 5,
+              "Hits": 124
+            },
+            {
+              "Line": 50,
+              "Offset": 112,
+              "EndOffset": 114,
+              "Path": 0,
+              "Ordinal": 6,
+              "Hits": 0
+            },
+            {
+              "Line": 50,
+              "Offset": 112,
+              "EndOffset": 119,
+              "Path": 1,
+              "Ordinal": 7,
+              "Hits": 124
+            }
+          ]
+        }
+      }
+    },
+    "/Users/kemaltaskin/Projects/Quiz/Models/TransferObjects/TokenRequest.cs": {
+      "Models.TransferObjects.TokenRequest": {
+        "System.String Models.TransferObjects.TokenRequest::get_Email()": {
+          "Lines": {
+            "11": 12
+          },
+          "Branches": []
+        },
+        "System.String Models.TransferObjects.TokenRequest::get_Password()": {
+          "Lines": {
+            "16": 12
+          },
+          "Branches": []
+        },
+        "System.String Models.TransferObjects.TokenRequest::get_DeviceId()": {
+          "Lines": {
+            "21": 8
+          },
+          "Branches": []
+        }
+      }
+    },
+    "/Users/kemaltaskin/Projects/Quiz/Models/TransferObjects/UpdateQuizAttemptResponse.cs": {
+      "Models.TransferObjects.UpdateQuizAttemptResponse": {
+        "Models.TransferObjects.UpdateQuizAttemptStatusResult Models.TransferObjects.UpdateQuizAttemptResponse::get_Result()": {
+          "Lines": {
+            "13": 24
+          },
+          "Branches": []
+        },
+        "Models.DbModels.QuizAttempt Models.TransferObjects.UpdateQuizAttemptResponse::get_Attempt()": {
+          "Lines": {
+            "18": 24
+          },
+          "Branches": []
+        }
+      }
+    },
+    "/Users/kemaltaskin/Projects/Quiz/Models/TransferObjects/UpdateQuizAttemptStatus.cs": {
+      "Models.TransferObjects.UpdateQuizAttemptStatus": {
+        "System.Int32 Models.TransferObjects.UpdateQuizAttemptStatus::get_TimeSpent()": {
+          "Lines": {
+            "13": 30
+          },
+          "Branches": []
+        },
+        "System.Boolean Models.TransferObjects.UpdateQuizAttemptStatus::get_EndQuiz()": {
+          "Lines": {
+            "18": 16
+          },
+          "Branches": []
+        }
+      }
+    },
+    "/Users/kemaltaskin/Projects/Quiz/Models/TransferObjects/User.cs": {
+      "Models.TransferObjects.User": {
+        "System.String Models.TransferObjects.User::get_Email()": {
+          "Lines": {
+            "11": 270
+          },
+          "Branches": []
+        },
+        "System.String Models.TransferObjects.User::get_FirstName()": {
+          "Lines": {
+            "16": 246
+          },
+          "Branches": []
+        },
+        "System.String Models.TransferObjects.User::get_LastName()": {
+          "Lines": {
+            "21": 246
+          },
+          "Branches": []
+        },
+        "System.String Models.TransferObjects.User::get_PictureUrl()": {
+          "Lines": {
+            "26": 246
+          },
+          "Branches": []
+        },
+        "System.String Models.TransferObjects.User::get_Password()": {
+          "Lines": {
+            "31": 364
+          },
+          "Branches": []
+        },
+        "System.String Models.TransferObjects.User::get_DeviceId()": {
+          "Lines": {
+            "36": 128
+          },
+          "Branches": []
+        }
+      }
+    },
+    "/Users/kemaltaskin/Projects/Quiz/Models/DbModels/Answer.cs": {
+      "Models.DbModels.Answer": {
+        "System.Int32 Models.DbModels.Answer::get_AttemptId()": {
+          "Lines": {
+            "11": 0
+          },
+          "Branches": []
+        },
+        "System.Int32 Models.DbModels.Answer::get_QuestionId()": {
+          "Lines": {
+            "16": 0
+          },
+          "Branches": []
+        },
+        "System.Int32 Models.DbModels.Answer::get_OptionId()": {
+          "Lines": {
+            "21": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "/Users/kemaltaskin/Projects/Quiz/Models/DbModels/OneTimeToken.cs": {
+      "Models.DbModels.OneTimeToken": {
+        "System.Int32 Models.DbModels.OneTimeToken::get_Id()": {
+          "Lines": {
+            "13": 0
+          },
+          "Branches": []
+        },
+        "System.String Models.DbModels.OneTimeToken::get_Email()": {
+          "Lines": {
+            "18": 36
+          },
+          "Branches": []
+        },
+        "System.Byte Models.DbModels.OneTimeToken::get_TokenType()": {
+          "Lines": {
+            "23": 0
+          },
+          "Branches": []
+        },
+        "System.String Models.DbModels.OneTimeToken::get_Token()": {
+          "Lines": {
+            "28": 0
+          },
+          "Branches": []
+        },
+        "System.DateTime Models.DbModels.OneTimeToken::get_ValidUntil()": {
+          "Lines": {
+            "33": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "/Users/kemaltaskin/Projects/Quiz/Models/DbModels/Option.cs": {
+      "Models.DbModels.Option": {
+        "System.Int32 Models.DbModels.Option::get_Id()": {
+          "Lines": {
+            "11": 0
+          },
+          "Branches": []
+        },
+        "System.String Models.DbModels.Option::get_Body()": {
+          "Lines": {
+            "16": 0
+          },
+          "Branches": []
+        },
+        "System.Boolean Models.DbModels.Option::get_IsCorrect()": {
+          "Lines": {
+            "21": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "/Users/kemaltaskin/Projects/Quiz/Models/DbModels/Pool.cs": {
+      "Models.DbModels.Pool": {
+        "System.Int32 Models.DbModels.Pool::get_Id()": {
+          "Lines": {
+            "11": 0
+          },
+          "Branches": []
+        },
+        "System.Int32 Models.DbModels.Pool::get_OwnerId()": {
+          "Lines": {
+            "16": 0
+          },
+          "Branches": []
+        },
+        "System.String Models.DbModels.Pool::get_Name()": {
+          "Lines": {
+            "21": 0
+          },
+          "Branches": []
+        },
+        "System.Boolean Models.DbModels.Pool::get_IsPublic()": {
+          "Lines": {
+            "26": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "/Users/kemaltaskin/Projects/Quiz/Models/DbModels/Question.cs": {
+      "Models.DbModels.Question": {
+        "System.Int32 Models.DbModels.Question::get_Id()": {
+          "Lines": {
+            "14": 286
+          },
+          "Branches": []
+        },
+        "System.String Models.DbModels.Question::get_Body()": {
+          "Lines": {
+            "19": 0
+          },
+          "Branches": []
+        },
+        "System.Byte Models.DbModels.Question::get_Level()": {
+          "Lines": {
+            "24": 40
+          },
+          "Branches": []
+        },
+        "Models.DbModels.QuestionType Models.DbModels.Question::get_Type()": {
+          "Lines": {
+            "29": 0
+          },
+          "Branches": []
+        },
+        "System.Collections.Generic.IEnumerable`1<System.Int32> Models.DbModels.Question::get_OptionIds()": {
+          "Lines": {
+            "35": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "/Users/kemaltaskin/Projects/Quiz/Models/DbModels/QuestionOption.cs": {
+      "Models.DbModels.QuestionOption": {
+        "System.Int32 Models.DbModels.QuestionOption::get_QuestionId()": {
+          "Lines": {
+            "11": 136
+          },
+          "Branches": []
+        },
+        "System.Int32 Models.DbModels.QuestionOption::get_OptionId()": {
+          "Lines": {
+            "16": 76
+          },
+          "Branches": []
+        },
+        "System.Byte Models.DbModels.QuestionOption::get_OptionOrder()": {
+          "Lines": {
+            "22": 76
+          },
+          "Branches": []
+        }
+      }
+    },
+    "/Users/kemaltaskin/Projects/Quiz/Models/DbModels/Quiz.cs": {
+      "Models.DbModels.Quiz": {
+        "System.Int32 Models.DbModels.Quiz::get_Id()": {
+          "Lines": {
+            "18": 0
+          },
+          "Branches": []
+        },
+        "System.Int32 Models.DbModels.Quiz::get_QuizIdentityId()": {
+          "Lines": {
+            "24": 170
+          },
+          "Branches": []
+        },
+        "Models.DbModels.QuizStatus Models.DbModels.Quiz::get_Status()": {
+          "Lines": {
+            "30": 0
+          },
+          "Branches": []
+        },
+        "System.Int32 Models.DbModels.Quiz::get_Version()": {
+          "Lines": {
+            "36": 0
+          },
+          "Branches": []
+        },
+        "System.String Models.DbModels.Quiz::get_Title()": {
+          "Lines": {
+            "42": 0
+          },
+          "Branches": []
+        },
+        "System.String Models.DbModels.Quiz::get_Intro()": {
+          "Lines": {
+            "48": 0
+          },
+          "Branches": []
+        },
+        "System.Collections.Generic.IEnumerable`1<System.Int32> Models.DbModels.Quiz::get_QuestionIds()": {
+          "Lines": {
+            "55": 0
+          },
+          "Branches": []
+        },
+        "System.Int32 Models.DbModels.Quiz::get_TimeLimitInSeconds()": {
+          "Lines": {
+            "61": 20
+          },
+          "Branches": []
+        },
+        "System.Boolean Models.DbModels.Quiz::get_TimeConstraint()": {
+          "Lines": {
+            "67": 20
+          },
+          "Branches": []
+        },
+        "System.Boolean Models.DbModels.Quiz::get_ShuffleQuestions()": {
+          "Lines": {
+            "73": 0
+          },
+          "Branches": []
+        },
+        "System.Boolean Models.DbModels.Quiz::get_ShuffleOptions()": {
+          "Lines": {
+            "79": 0
+          },
+          "Branches": []
+        },
+        "System.Nullable`1<System.Int32> Models.DbModels.Quiz::get_PassScore()": {
+          "Lines": {
+            "85": 0
+          },
+          "Branches": []
+        },
+        "System.Boolean Models.DbModels.Quiz::get_Repeatable()": {
+          "Lines": {
+            "91": 8
+          },
+          "Branches": []
+        },
+        "System.Nullable`1<System.DateTime> Models.DbModels.Quiz::get_ShowResults()": {
+          "Lines": {
+            "97": 0
+          },
+          "Branches": []
+        },
+        "System.Nullable`1<System.DateTime> Models.DbModels.Quiz::get_AvailableFrom()": {
+          "Lines": {
+            "103": 0
+          },
+          "Branches": []
+        },
+        "System.Nullable`1<System.DateTime> Models.DbModels.Quiz::get_AvailableTo()": {
+          "Lines": {
+            "109": 26
+          },
+          "Branches": []
+        },
+        "Models.DbModels.QuizAttempt Models.DbModels.Quiz::get_LastAttempt()": {
+          "Lines": {
+            "115": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "/Users/kemaltaskin/Projects/Quiz/Models/DbModels/QuizAssignment.cs": {
+      "Models.DbModels.QuizAssignment": {
+        "System.Int32 Models.DbModels.QuizAssignment::get_QuizIdentityId()": {
+          "Lines": {
+            "11": 0
+          },
+          "Branches": []
+        },
+        "System.String Models.DbModels.QuizAssignment::get_Email()": {
+          "Lines": {
+            "16": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "/Users/kemaltaskin/Projects/Quiz/Models/DbModels/QuizAttempt.cs": {
+      "Models.DbModels.QuizAttempt": {
+        "System.Int32 Models.DbModels.QuizAttempt::get_Id()": {
+          "Lines": {
+            "16": 0
+          },
+          "Branches": []
+        },
+        "System.Int32 Models.DbModels.QuizAttempt::get_UserId()": {
+          "Lines": {
+            "22": 28
+          },
+          "Branches": []
+        },
+        "System.Int32 Models.DbModels.QuizAttempt::get_QuizId()": {
+          "Lines": {
+            "28": 48
+          },
+          "Branches": []
+        },
+        "Models.DbModels.QuizAttemptStatus Models.DbModels.QuizAttempt::get_Status()": {
+          "Lines": {
+            "34": 64
+          },
+          "Branches": []
+        },
+        "System.DateTime Models.DbModels.QuizAttempt::get_StartDate()": {
+          "Lines": {
+            "40": 0
+          },
+          "Branches": []
+        },
+        "System.Nullable`1<System.DateTime> Models.DbModels.QuizAttempt::get_EndDate()": {
+          "Lines": {
+            "46": 0
+          },
+          "Branches": []
+        },
+        "System.Nullable`1<System.Int32> Models.DbModels.QuizAttempt::get_Correct()": {
+          "Lines": {
+            "52": 0
+          },
+          "Branches": []
+        },
+        "System.Nullable`1<System.Int32> Models.DbModels.QuizAttempt::get_Incorrect()": {
+          "Lines": {
+            "58": 0
+          },
+          "Branches": []
+        },
+        "System.Nullable`1<System.Decimal> Models.DbModels.QuizAttempt::get_Score()": {
+          "Lines": {
+            "64": 0
+          },
+          "Branches": []
+        },
+        "System.Int32 Models.DbModels.QuizAttempt::get_TimeSpent()": {
+          "Lines": {
+            "70": 24
+          },
+          "Branches": []
+        }
+      }
+    },
+    "/Users/kemaltaskin/Projects/Quiz/Models/DbModels/QuizIdentity.cs": {
+      "Models.DbModels.QuizIdentity": {
+        "System.Int32 Models.DbModels.QuizIdentity::get_Id()": {
+          "Lines": {
+            "15": 0
+          },
+          "Branches": []
+        },
+        "System.Int32 Models.DbModels.QuizIdentity::get_OwnerId()": {
+          "Lines": {
+            "21": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "/Users/kemaltaskin/Projects/Quiz/Models/DbModels/QuizQuestion.cs": {
+      "Models.DbModels.QuizQuestion": {
+        "System.Int32 Models.DbModels.QuizQuestion::get_QuizId()": {
+          "Lines": {
+            "11": 0
+          },
+          "Branches": []
+        },
+        "System.Int32 Models.DbModels.QuizQuestion::get_QuestionId()": {
+          "Lines": {
+            "16": 0
+          },
+          "Branches": []
+        },
+        "System.Byte Models.DbModels.QuizQuestion::get_QuestionOrder()": {
+          "Lines": {
+            "21": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "/Users/kemaltaskin/Projects/Quiz/Models/DbModels/User.cs": {
+      "Models.DbModels.User": {
+        "System.Int32 Models.DbModels.User::get_Id()": {
+          "Lines": {
+            "11": 0
+          },
+          "Branches": []
+        },
+        "System.String Models.DbModels.User::get_Email()": {
+          "Lines": {
+            "16": 0
+          },
+          "Branches": []
+        },
+        "System.String Models.DbModels.User::get_FirstName()": {
+          "Lines": {
+            "21": 214
+          },
+          "Branches": []
+        },
+        "System.String Models.DbModels.User::get_LastName()": {
+          "Lines": {
+            "26": 214
+          },
+          "Branches": []
+        },
+        "System.String Models.DbModels.User::get_PictureUrl()": {
+          "Lines": {
+            "31": 214
+          },
+          "Branches": []
+        },
+        "System.Byte[] Models.DbModels.User::get_PasswordHash()": {
+          "Lines": {
+            "36": 230
+          },
+          "Branches": []
+        },
+        "System.Boolean Models.DbModels.User::get_IsVerified()": {
+          "Lines": {
+            "41": 224
+          },
+          "Branches": []
+        }
+      }
+    },
+    "/Users/kemaltaskin/Projects/Quiz/Models/DbModels/UserToken.cs": {
+      "Models.DbModels.UserToken": {
+        "System.Int32 Models.DbModels.UserToken::get_UserId()": {
+          "Lines": {
+            "13": 26
+          },
+          "Branches": []
+        },
+        "System.String Models.DbModels.UserToken::get_Token()": {
+          "Lines": {
+            "18": 34
+          },
+          "Branches": []
+        },
+        "System.String Models.DbModels.UserToken::get_DeviceId()": {
+          "Lines": {
+            "23": 0
+          },
+          "Branches": []
+        },
+        "System.DateTime Models.DbModels.UserToken::get_ValidUntil()": {
+          "Lines": {
+            "28": 28
+          },
+          "Branches": []
+        }
+      }
+    }
+  },
+  "BusinessLayer.dll": {
+    "/Users/kemaltaskin/Projects/Quiz/BusinessLayer/Implementations/AuthManager.cs": {
+      "BusinessLayer.Implementations.AuthManager": {
+        "System.Void BusinessLayer.Implementations.AuthManager::.ctor(BusinessLayer.Context.QuizContext,Common.Interfaces.ILogManager)": {
+          "Lines": {
+            "22": 28,
+            "23": 28,
+            "24": 28
+          },
+          "Branches": []
+        }
+      },
+      "BusinessLayer.Implementations.AuthManager/<VerifyAccessToken>d__1": {
+        "System.Void BusinessLayer.Implementations.AuthManager/<VerifyAccessToken>d__1::MoveNext()": {
+          "Lines": {
+            "32": 10,
+            "33": 10,
+            "35": 10,
+            "36": 4,
+            "37": 4,
+            "40": 6,
+            "42": 6,
+            "43": 2,
+            "44": 2,
+            "47": 4,
+            "48": 4,
+            "49": 4,
+            "50": 4,
+            "51": 4,
+            "52": 4,
+            "53": 4,
+            "54": 10
+          },
+          "Branches": [
+            {
+              "Line": 35,
+              "Offset": 170,
+              "EndOffset": 172,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 4
+            },
+            {
+              "Line": 35,
+              "Offset": 170,
+              "EndOffset": 180,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 6
+            },
+            {
+              "Line": 40,
+              "Offset": 244,
+              "EndOffset": 246,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 0
+            },
+            {
+              "Line": 40,
+              "Offset": 244,
+              "EndOffset": 315,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 6
+            },
+            {
+              "Line": 42,
+              "Offset": 360,
+              "EndOffset": 362,
+              "Path": 0,
+              "Ordinal": 4,
+              "Hits": 2
+            },
+            {
+              "Line": 42,
+              "Offset": 360,
+              "EndOffset": 367,
+              "Path": 1,
+              "Ordinal": 5,
+              "Hits": 4
+            }
+          ]
+        }
+      },
+      "BusinessLayer.Implementations.AuthManager/<GenerateTokenAsync>d__2": {
+        "System.Void BusinessLayer.Implementations.AuthManager/<GenerateTokenAsync>d__2::MoveNext()": {
+          "Lines": {
+            "62": 6,
+            "63": 6,
+            "65": 6,
+            "67": 6,
+            "68": 2,
+            "69": 2,
+            "71": 2,
+            "74": 4,
+            "75": 6
+          },
+          "Branches": [
+            {
+              "Line": 67,
+              "Offset": 354,
+              "EndOffset": 356,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 4
+            },
+            {
+              "Line": 67,
+              "Offset": 354,
+              "EndOffset": 380,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 2
+            },
+            {
+              "Line": 67,
+              "Offset": 385,
+              "EndOffset": 390,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 2
+            },
+            {
+              "Line": 67,
+              "Offset": 385,
+              "EndOffset": 556,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 4
+            }
+          ]
+        }
+      },
+      "BusinessLayer.Implementations.AuthManager/<GenerateTokenAsync>d__3": {
+        "System.Void BusinessLayer.Implementations.AuthManager/<GenerateTokenAsync>d__3::MoveNext()": {
+          "Lines": {
+            "84": 8,
+            "87": 8,
+            "88": 8,
+            "90": 8,
+            "91": 2,
+            "92": 2,
+            "95": 6,
+            "96": 2,
+            "97": 2,
+            "98": 2,
+            "100": 2,
+            "102": 2,
+            "103": 2,
+            "104": 2,
+            "105": 2,
+            "106": 2,
+            "107": 2,
+            "108": 2,
+            "109": 2,
+            "111": 4,
+            "112": 4,
+            "114": 4,
+            "115": 4,
+            "116": 4,
+            "117": 4,
+            "118": 4,
+            "119": 4,
+            "120": 4,
+            "122": 4,
+            "124": 4,
+            "125": 4,
+            "126": 4,
+            "127": 4,
+            "128": 4,
+            "129": 4,
+            "130": 4,
+            "131": 4,
+            "133": 6,
+            "134": 8
+          },
+          "Branches": [
+            {
+              "Line": 87,
+              "Offset": 127,
+              "EndOffset": 129,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 87,
+              "Offset": 127,
+              "EndOffset": 197,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 8
+            },
+            {
+              "Line": 88,
+              "Offset": 288,
+              "EndOffset": 290,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 0
+            },
+            {
+              "Line": 88,
+              "Offset": 288,
+              "EndOffset": 360,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 8
+            },
+            {
+              "Line": 90,
+              "Offset": 405,
+              "EndOffset": 407,
+              "Path": 0,
+              "Ordinal": 4,
+              "Hits": 2
+            },
+            {
+              "Line": 90,
+              "Offset": 405,
+              "EndOffset": 415,
+              "Path": 1,
+              "Ordinal": 5,
+              "Hits": 6
+            },
+            {
+              "Line": 95,
+              "Offset": 428,
+              "EndOffset": 433,
+              "Path": 0,
+              "Ordinal": 6,
+              "Hits": 2
+            },
+            {
+              "Line": 95,
+              "Offset": 428,
+              "EndOffset": 693,
+              "Path": 1,
+              "Ordinal": 7,
+              "Hits": 4
+            },
+            {
+              "Line": 114,
+              "Offset": 826,
+              "EndOffset": 828,
+              "Path": 0,
+              "Ordinal": 8,
+              "Hits": 0
+            },
+            {
+              "Line": 114,
+              "Offset": 826,
+              "EndOffset": 898,
+              "Path": 1,
+              "Ordinal": 9,
+              "Hits": 4
+            }
+          ]
+        }
+      },
+      "BusinessLayer.Implementations.AuthManager/<GetAccessToken>d__4": {
+        "System.Void BusinessLayer.Implementations.AuthManager/<GetAccessToken>d__4::MoveNext()": {
+          "Lines": {
+            "142": 16,
+            "143": 16,
+            "144": 16,
+            "145": 16,
+            "147": 16,
+            "148": 16
+          },
+          "Branches": []
+        }
+      }
+    },
+    "/Users/kemaltaskin/Projects/Quiz/BusinessLayer/Implementations/ContextManager.cs": {
+      "BusinessLayer.Implementations.ContextManager": {
+        "System.Void BusinessLayer.Implementations.ContextManager::BeginTransaction()": {
+          "Lines": {
+            "33": 0,
+            "34": 0,
+            "35": 0
+          },
+          "Branches": []
+        },
+        "System.Void BusinessLayer.Implementations.ContextManager::Rollback()": {
+          "Lines": {
+            "41": 0,
+            "42": 0,
+            "43": 0,
+            "44": 0
+          },
+          "Branches": []
+        },
+        "System.Void BusinessLayer.Implementations.ContextManager::.ctor(BusinessLayer.Context.QuizContext,Common.Interfaces.ILogManager)": {
+          "Lines": {
+            "24": 0,
+            "25": 0,
+            "26": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "/Users/kemaltaskin/Projects/Quiz/BusinessLayer/Implementations/ManagerBase.cs": {
+      "BusinessLayer.Implementations.ManagerBase": {
+        "BusinessLayer.Context.QuizContext BusinessLayer.Implementations.ManagerBase::get_Context()": {
+          "Lines": {
+            "14": 1168
+          },
+          "Branches": []
+        },
+        "Common.Interfaces.ILogManager BusinessLayer.Implementations.ManagerBase::get_LogManager()": {
+          "Lines": {
+            "19": 2
+          },
+          "Branches": []
+        },
+        "System.Void BusinessLayer.Implementations.ManagerBase::.ctor(BusinessLayer.Context.QuizContext,Common.Interfaces.ILogManager)": {
+          "Lines": {
+            "26": 198,
+            "27": 198,
+            "28": 198,
+            "29": 198,
+            "30": 198
+          },
+          "Branches": []
+        }
+      }
+    },
+    "/Users/kemaltaskin/Projects/Quiz/BusinessLayer/Implementations/OptionManager.cs": {
+      "BusinessLayer.Implementations.OptionManager": {
+        "System.Void BusinessLayer.Implementations.OptionManager::.ctor(BusinessLayer.Context.QuizContext,Common.Interfaces.ILogManager)": {
+          "Lines": {
+            "21": 10,
+            "22": 10,
+            "23": 10
+          },
+          "Branches": []
+        }
+      },
+      "BusinessLayer.Implementations.OptionManager/<GetQuizOptions>d__1": {
+        "System.Void BusinessLayer.Implementations.OptionManager/<GetQuizOptions>d__1::MoveNext()": {
+          "Lines": {
+            "31": 4,
+            "32": 4,
+            "33": 4,
+            "34": 4,
+            "35": 4,
+            "36": 4,
+            "37": 4,
+            "38": 4,
+            "40": 4,
+            "41": 4
+          },
+          "Branches": []
+        }
+      },
+      "BusinessLayer.Implementations.OptionManager/<InsertOptionInternalAsync>d__2": {
+        "System.Void BusinessLayer.Implementations.OptionManager/<InsertOptionInternalAsync>d__2::MoveNext()": {
+          "Lines": {
+            "44": 46,
+            "45": 46,
+            "47": 46,
+            "49": 46,
+            "50": 46
+          },
+          "Branches": [
+            {
+              "Line": 45,
+              "Offset": 79,
+              "EndOffset": 81,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 45,
+              "Offset": 79,
+              "EndOffset": 149,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 46
+            }
+          ]
+        }
+      },
+      "BusinessLayer.Implementations.OptionManager/<AssignOptionInternalAsync>d__3": {
+        "System.Void BusinessLayer.Implementations.OptionManager/<AssignOptionInternalAsync>d__3::MoveNext()": {
+          "Lines": {
+            "53": 46,
+            "54": 46,
+            "55": 46,
+            "56": 46,
+            "57": 46,
+            "59": 46,
+            "61": 46,
+            "62": 46,
+            "63": 46,
+            "64": 46,
+            "65": 46,
+            "66": 46,
+            "68": 46,
+            "70": 46,
+            "71": 46
+          },
+          "Branches": [
+            {
+              "Line": 59,
+              "Offset": 276,
+              "EndOffset": 278,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 10
+            },
+            {
+              "Line": 59,
+              "Offset": 276,
+              "EndOffset": 281,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 36
+            },
+            {
+              "Line": 61,
+              "Offset": 397,
+              "EndOffset": 399,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 0
+            },
+            {
+              "Line": 61,
+              "Offset": 397,
+              "EndOffset": 467,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 46
+            }
+          ]
+        }
+      }
+    },
+    "/Users/kemaltaskin/Projects/Quiz/BusinessLayer/Implementations/QuestionManager.cs": {
+      "BusinessLayer.Implementations.QuestionManager": {
+        "System.Void BusinessLayer.Implementations.QuestionManager::.ctor(BusinessLayer.Context.QuizContext,Common.Interfaces.ILogManager)": {
+          "Lines": {
+            "21": 30,
+            "22": 30,
+            "23": 30
+          },
+          "Branches": []
+        }
+      },
+      "BusinessLayer.Implementations.QuestionManager/<>c__DisplayClass1_1": {
+        "System.Boolean BusinessLayer.Implementations.QuestionManager/<>c__DisplayClass1_1::<GetQuizQuestions>b__17(Models.DbModels.QuestionOption)": {
+          "Lines": {
+            "52": 96
+          },
+          "Branches": []
+        }
+      },
+      "BusinessLayer.Implementations.QuestionManager/<>c": {
+        "System.Byte BusinessLayer.Implementations.QuestionManager/<>c::<GetQuizQuestions>b__1_18(Models.DbModels.QuestionOption)": {
+          "Lines": {
+            "53": 36
+          },
+          "Branches": []
+        },
+        "System.Int32 BusinessLayer.Implementations.QuestionManager/<>c::<GetQuizQuestions>b__1_19(Models.DbModels.QuestionOption)": {
+          "Lines": {
+            "54": 36
+          },
+          "Branches": []
+        }
+      },
+      "BusinessLayer.Implementations.QuestionManager/<GetQuizQuestions>d__1": {
+        "System.Void BusinessLayer.Implementations.QuestionManager/<GetQuizQuestions>d__1::MoveNext()": {
+          "Lines": {
+            "31": 10,
+            "32": 10,
+            "33": 10,
+            "34": 10,
+            "35": 10,
+            "36": 10,
+            "37": 10,
+            "38": 10,
+            "39": 10,
+            "41": 10,
+            "42": 10,
+            "43": 10,
+            "44": 10,
+            "45": 10,
+            "46": 10,
+            "47": 10,
+            "49": 42,
+            "50": 6,
+            "51": 6,
+            "55": 6,
+            "56": 6,
+            "58": 10,
+            "59": 10
+          },
+          "Branches": [
+            {
+              "Line": 49,
+              "Offset": 2048,
+              "EndOffset": 1873,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 6
+            },
+            {
+              "Line": 49,
+              "Offset": 2048,
+              "EndOffset": 2053,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 10
+            }
+          ]
+        }
+      },
+      "BusinessLayer.Implementations.QuestionManager/<InsertQuestionInternalAsync>d__2": {
+        "System.Void BusinessLayer.Implementations.QuestionManager/<InsertQuestionInternalAsync>d__2::MoveNext()": {
+          "Lines": {
+            "62": 10,
+            "63": 10,
+            "65": 10,
+            "67": 10,
+            "68": 10
+          },
+          "Branches": [
+            {
+              "Line": 63,
+              "Offset": 79,
+              "EndOffset": 81,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 63,
+              "Offset": 79,
+              "EndOffset": 149,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 10
+            }
+          ]
+        }
+      },
+      "BusinessLayer.Implementations.QuestionManager/<AssignQuestionInternalAsync>d__3": {
+        "System.Void BusinessLayer.Implementations.QuestionManager/<AssignQuestionInternalAsync>d__3::MoveNext()": {
+          "Lines": {
+            "71": 10,
+            "72": 10,
+            "73": 10,
+            "74": 10,
+            "75": 10,
+            "77": 10,
+            "79": 10,
+            "80": 10,
+            "81": 10,
+            "82": 10,
+            "83": 10,
+            "84": 10,
+            "86": 10,
+            "88": 10,
+            "89": 10
+          },
+          "Branches": [
+            {
+              "Line": 77,
+              "Offset": 276,
+              "EndOffset": 278,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 4
+            },
+            {
+              "Line": 77,
+              "Offset": 276,
+              "EndOffset": 281,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 6
+            },
+            {
+              "Line": 79,
+              "Offset": 397,
+              "EndOffset": 399,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 0
+            },
+            {
+              "Line": 79,
+              "Offset": 397,
+              "EndOffset": 467,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 10
+            }
+          ]
+        }
+      }
+    },
+    "/Users/kemaltaskin/Projects/Quiz/BusinessLayer/Implementations/QuizAttemptManager.cs": {
+      "BusinessLayer.Implementations.QuizAttemptManager": {
+        "System.ValueTuple`3<System.Int32,System.Int32,System.Decimal> BusinessLayer.Implementations.QuizAttemptManager::EvaluateQuiz(System.Collections.Generic.List`1<Models.DbModels.Question>,System.Collections.Generic.List`1<BusinessLayer.Implementations.QuestionAnswer>)": {
+          "Lines": {
+            "207": 12,
+            "208": 26,
+            "209": 12,
+            "210": 12,
+            "211": 12,
+            "213": 64,
+            "214": 14,
+            "215": 192,
+            "217": 66,
+            "218": 66,
+            "219": 66,
+            "221": 14,
+            "222": 8,
+            "223": 8,
+            "224": 8,
+            "225": 8,
+            "226": 6,
+            "227": 2,
+            "228": 2,
+            "229": 2,
+            "230": 14,
+            "232": 12,
+            "234": 12,
+            "235": 12
+          },
+          "Branches": [
+            {
+              "Line": 213,
+              "Offset": 303,
+              "EndOffset": 59,
+              "Path": 1,
+              "Ordinal": 9,
+              "Hits": 14
+            },
+            {
+              "Line": 221,
+              "Offset": 231,
+              "EndOffset": 233,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 8
+            },
+            {
+              "Line": 221,
+              "Offset": 231,
+              "EndOffset": 240,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 6
+            },
+            {
+              "Line": 221,
+              "Offset": 245,
+              "EndOffset": 247,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 8
+            },
+            {
+              "Line": 221,
+              "Offset": 245,
+              "EndOffset": 270,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 6
+            },
+            {
+              "Line": 226,
+              "Offset": 273,
+              "EndOffset": 275,
+              "Path": 0,
+              "Ordinal": 4,
+              "Hits": 6
+            },
+            {
+              "Line": 226,
+              "Offset": 273,
+              "EndOffset": 282,
+              "Path": 1,
+              "Ordinal": 5,
+              "Hits": 0
+            },
+            {
+              "Line": 226,
+              "Offset": 287,
+              "EndOffset": 289,
+              "Path": 0,
+              "Ordinal": 6,
+              "Hits": 2
+            },
+            {
+              "Line": 226,
+              "Offset": 287,
+              "EndOffset": 295,
+              "Path": 1,
+              "Ordinal": 7,
+              "Hits": 14
+            },
+            {
+              "Line": 213,
+              "Offset": 303,
+              "EndOffset": 308,
+              "Path": 0,
+              "Ordinal": 8,
+              "Hits": 12
+            },
+            {
+              "Line": 218,
+              "Offset": 6,
+              "EndOffset": 8,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 16
+            },
+            {
+              "Line": 218,
+              "Offset": 6,
+              "EndOffset": 16,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 36
+            },
+            {
+              "Line": 219,
+              "Offset": 6,
+              "EndOffset": 8,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 36
+            },
+            {
+              "Line": 219,
+              "Offset": 6,
+              "EndOffset": 16,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 16
+            }
+          ]
+        },
+        "System.Decimal BusinessLayer.Implementations.QuizAttemptManager::RoundScore(System.Int32,System.Int32)": {
+          "Lines": {
+            "238": 18,
+            "239": 18,
+            "240": 18,
+            "241": 2,
+            "242": 2,
+            "243": 2,
+            "245": 18,
+            "246": 18
+          },
+          "Branches": [
+            {
+              "Line": 239,
+              "Offset": 2,
+              "EndOffset": 4,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 8
+            },
+            {
+              "Line": 239,
+              "Offset": 2,
+              "EndOffset": 32,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 10
+            },
+            {
+              "Line": 240,
+              "Offset": 53,
+              "EndOffset": 55,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 2
+            },
+            {
+              "Line": 240,
+              "Offset": 53,
+              "EndOffset": 66,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 18
+            }
+          ]
+        },
+        "Models.DbModels.QuizAttemptStatus BusinessLayer.Implementations.QuizAttemptManager::EvaluateStatus(System.Decimal,System.Nullable`1<System.Int32>)": {
+          "Lines": {
+            "249": 18,
+            "250": 18,
+            "251": 12,
+            "252": 12,
+            "255": 6,
+            "256": 18
+          },
+          "Branches": [
+            {
+              "Line": 250,
+              "Offset": 13,
+              "EndOffset": 15,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 12
+            },
+            {
+              "Line": 250,
+              "Offset": 13,
+              "EndOffset": 20,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 6
+            },
+            {
+              "Line": 255,
+              "Offset": 30,
+              "EndOffset": 32,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 0
+            },
+            {
+              "Line": 255,
+              "Offset": 30,
+              "EndOffset": 44,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 6
+            },
+            {
+              "Line": 255,
+              "Offset": 82,
+              "EndOffset": 84,
+              "Path": 0,
+              "Ordinal": 4,
+              "Hits": 2
+            },
+            {
+              "Line": 255,
+              "Offset": 82,
+              "EndOffset": 87,
+              "Path": 1,
+              "Ordinal": 5,
+              "Hits": 4
+            }
+          ]
+        },
+        "System.Void BusinessLayer.Implementations.QuizAttemptManager::.ctor(BusinessLayer.Context.QuizContext,BusinessLayer.Interfaces.IQuestionManager,Common.Interfaces.ILogManager)": {
+          "Lines": {
+            "26": 26,
+            "27": 26,
+            "28": 26,
+            "29": 26
+          },
+          "Branches": []
+        }
+      },
+      "BusinessLayer.Implementations.QuizAttemptManager/<CreateAttempt>d__2": {
+        "System.Void BusinessLayer.Implementations.QuizAttemptManager/<CreateAttempt>d__2::MoveNext()": {
+          "Lines": {
+            "38": 12,
+            "39": 12,
+            "41": 12,
+            "42": 2,
+            "43": 2,
+            "44": 2,
+            "45": 2,
+            "46": 2,
+            "49": 10,
+            "50": 2,
+            "51": 2,
+            "52": 2,
+            "53": 2,
+            "54": 2,
+            "57": 8,
+            "58": 8,
+            "59": 8,
+            "60": 8,
+            "62": 8,
+            "63": 2,
+            "64": 2,
+            "65": 2,
+            "66": 2,
+            "67": 2,
+            "70": 6,
+            "72": 6,
+            "73": 4,
+            "74": 4,
+            "75": 2,
+            "76": 2,
+            "77": 2,
+            "78": 2,
+            "79": 2,
+            "82": 10,
+            "83": 2,
+            "84": 2,
+            "85": 2,
+            "86": 2,
+            "88": 4,
+            "90": 4,
+            "91": 4,
+            "92": 4,
+            "93": 4,
+            "94": 4,
+            "95": 12
+          },
+          "Branches": [
+            {
+              "Line": 39,
+              "Offset": 150,
+              "EndOffset": 152,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 39,
+              "Offset": 150,
+              "EndOffset": 220,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 12
+            },
+            {
+              "Line": 41,
+              "Offset": 275,
+              "EndOffset": 277,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 2
+            },
+            {
+              "Line": 41,
+              "Offset": 275,
+              "EndOffset": 297,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 10
+            },
+            {
+              "Line": 49,
+              "Offset": 322,
+              "EndOffset": 324,
+              "Path": 0,
+              "Ordinal": 4,
+              "Hits": 2
+            },
+            {
+              "Line": 49,
+              "Offset": 356,
+              "EndOffset": 358,
+              "Path": 0,
+              "Ordinal": 6,
+              "Hits": 0
+            },
+            {
+              "Line": 49,
+              "Offset": 356,
+              "EndOffset": 361,
+              "Path": 1,
+              "Ordinal": 7,
+              "Hits": 2
+            },
+            {
+              "Line": 49,
+              "Offset": 322,
+              "EndOffset": 377,
+              "Path": 1,
+              "Ordinal": 5,
+              "Hits": 8
+            },
+            {
+              "Line": 49,
+              "Offset": 382,
+              "EndOffset": 384,
+              "Path": 0,
+              "Ordinal": 8,
+              "Hits": 2
+            },
+            {
+              "Line": 49,
+              "Offset": 382,
+              "EndOffset": 404,
+              "Path": 1,
+              "Ordinal": 9,
+              "Hits": 8
+            },
+            {
+              "Line": 62,
+              "Offset": 1051,
+              "EndOffset": 1053,
+              "Path": 0,
+              "Ordinal": 10,
+              "Hits": 2
+            },
+            {
+              "Line": 62,
+              "Offset": 1051,
+              "EndOffset": 1073,
+              "Path": 1,
+              "Ordinal": 11,
+              "Hits": 6
+            },
+            {
+              "Line": 72,
+              "Offset": 1289,
+              "EndOffset": 1294,
+              "Path": 0,
+              "Ordinal": 12,
+              "Hits": 4
+            },
+            {
+              "Line": 74,
+              "Offset": 1318,
+              "EndOffset": 1320,
+              "Path": 0,
+              "Ordinal": 14,
+              "Hits": 2
+            },
+            {
+              "Line": 74,
+              "Offset": 1318,
+              "EndOffset": 1340,
+              "Path": 1,
+              "Ordinal": 15,
+              "Hits": 2
+            },
+            {
+              "Line": 82,
+              "Offset": 1547,
+              "EndOffset": 1372,
+              "Path": 1,
+              "Ordinal": 17,
+              "Hits": 2
+            },
+            {
+              "Line": 82,
+              "Offset": 1547,
+              "EndOffset": 1552,
+              "Path": 0,
+              "Ordinal": 16,
+              "Hits": 2
+            },
+            {
+              "Line": 72,
+              "Offset": 1289,
+              "EndOffset": 1590,
+              "Path": 1,
+              "Ordinal": 13,
+              "Hits": 4
+            }
+          ]
+        }
+      },
+      "BusinessLayer.Implementations.QuizAttemptManager/<UpdateStatus>d__3": {
+        "System.Void BusinessLayer.Implementations.QuizAttemptManager/<UpdateStatus>d__3::MoveNext()": {
+          "Lines": {
+            "105": 12,
+            "106": 12,
+            "108": 12,
+            "109": 2,
+            "110": 2,
+            "111": 2,
+            "112": 2,
+            "113": 2,
+            "116": 10,
+            "119": 10,
+            "120": 2,
+            "121": 2,
+            "123": 2,
+            "124": 2,
+            "125": 2,
+            "126": 2,
+            "127": 2,
+            "130": 8,
+            "131": 2,
+            "132": 2,
+            "134": 2,
+            "135": 2,
+            "136": 2,
+            "137": 2,
+            "138": 2,
+            "141": 6,
+            "142": 2,
+            "143": 2,
+            "144": 2,
+            "145": 2,
+            "146": 2,
+            "149": 4,
+            "150": 2,
+            "151": 2,
+            "153": 2,
+            "154": 2,
+            "155": 2,
+            "156": 2,
+            "157": 2,
+            "160": 2,
+            "162": 2,
+            "164": 2,
+            "165": 2,
+            "166": 2,
+            "167": 2,
+            "168": 2,
+            "169": 12
+          },
+          "Branches": [
+            {
+              "Line": 106,
+              "Offset": 115,
+              "EndOffset": 117,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 106,
+              "Offset": 115,
+              "EndOffset": 185,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 12
+            },
+            {
+              "Line": 108,
+              "Offset": 223,
+              "EndOffset": 225,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 10
+            },
+            {
+              "Line": 108,
+              "Offset": 223,
+              "EndOffset": 249,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 2
+            },
+            {
+              "Line": 108,
+              "Offset": 254,
+              "EndOffset": 256,
+              "Path": 0,
+              "Ordinal": 4,
+              "Hits": 2
+            },
+            {
+              "Line": 108,
+              "Offset": 254,
+              "EndOffset": 276,
+              "Path": 1,
+              "Ordinal": 5,
+              "Hits": 10
+            },
+            {
+              "Line": 116,
+              "Offset": 340,
+              "EndOffset": 342,
+              "Path": 0,
+              "Ordinal": 6,
+              "Hits": 0
+            },
+            {
+              "Line": 116,
+              "Offset": 340,
+              "EndOffset": 412,
+              "Path": 1,
+              "Ordinal": 7,
+              "Hits": 10
+            },
+            {
+              "Line": 119,
+              "Offset": 455,
+              "EndOffset": 457,
+              "Path": 0,
+              "Ordinal": 8,
+              "Hits": 10
+            },
+            {
+              "Line": 119,
+              "Offset": 455,
+              "EndOffset": 486,
+              "Path": 1,
+              "Ordinal": 9,
+              "Hits": 0
+            },
+            {
+              "Line": 119,
+              "Offset": 491,
+              "EndOffset": 496,
+              "Path": 0,
+              "Ordinal": 10,
+              "Hits": 2
+            },
+            {
+              "Line": 119,
+              "Offset": 491,
+              "EndOffset": 662,
+              "Path": 1,
+              "Ordinal": 11,
+              "Hits": 8
+            },
+            {
+              "Line": 130,
+              "Offset": 682,
+              "EndOffset": 684,
+              "Path": 0,
+              "Ordinal": 12,
+              "Hits": 2
+            },
+            {
+              "Line": 130,
+              "Offset": 711,
+              "EndOffset": 713,
+              "Path": 0,
+              "Ordinal": 14,
+              "Hits": 0
+            },
+            {
+              "Line": 130,
+              "Offset": 711,
+              "EndOffset": 716,
+              "Path": 1,
+              "Ordinal": 15,
+              "Hits": 2
+            },
+            {
+              "Line": 130,
+              "Offset": 682,
+              "EndOffset": 732,
+              "Path": 1,
+              "Ordinal": 13,
+              "Hits": 6
+            },
+            {
+              "Line": 130,
+              "Offset": 737,
+              "EndOffset": 742,
+              "Path": 0,
+              "Ordinal": 16,
+              "Hits": 2
+            },
+            {
+              "Line": 130,
+              "Offset": 737,
+              "EndOffset": 908,
+              "Path": 1,
+              "Ordinal": 17,
+              "Hits": 6
+            },
+            {
+              "Line": 141,
+              "Offset": 929,
+              "EndOffset": 931,
+              "Path": 0,
+              "Ordinal": 18,
+              "Hits": 2
+            },
+            {
+              "Line": 141,
+              "Offset": 929,
+              "EndOffset": 951,
+              "Path": 1,
+              "Ordinal": 19,
+              "Hits": 4
+            },
+            {
+              "Line": 149,
+              "Offset": 966,
+              "EndOffset": 971,
+              "Path": 0,
+              "Ordinal": 20,
+              "Hits": 2
+            },
+            {
+              "Line": 149,
+              "Offset": 966,
+              "EndOffset": 1134,
+              "Path": 1,
+              "Ordinal": 21,
+              "Hits": 2
+            }
+          ]
+        }
+      },
+      "BusinessLayer.Implementations.QuizAttemptManager/<FinishQuizAsync>d__4": {
+        "System.Void BusinessLayer.Implementations.QuizAttemptManager/<FinishQuizAsync>d__4::MoveNext()": {
+          "Lines": {
+            "172": 12,
+            "173": 12,
+            "174": 2,
+            "175": 2,
+            "178": 10,
+            "180": 10,
+            "181": 10,
+            "182": 10,
+            "183": 10,
+            "184": 10,
+            "185": 10,
+            "186": 10,
+            "187": 10,
+            "188": 10,
+            "190": 10,
+            "192": 10,
+            "193": 10,
+            "194": 10,
+            "195": 10,
+            "196": 10,
+            "197": 10,
+            "199": 10,
+            "201": 10,
+            "203": 10,
+            "204": 12
+          },
+          "Branches": [
+            {
+              "Line": 173,
+              "Offset": 81,
+              "EndOffset": 83,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 2
+            },
+            {
+              "Line": 173,
+              "Offset": 81,
+              "EndOffset": 91,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 10
+            }
+          ]
+        }
+      },
+      "BusinessLayer.Implementations.QuizAttemptManager/<InsertAttemptInternalAsync>d__8": {
+        "System.Void BusinessLayer.Implementations.QuizAttemptManager/<InsertAttemptInternalAsync>d__8::MoveNext()": {
+          "Lines": {
+            "259": 4,
+            "260": 4,
+            "261": 4,
+            "262": 4,
+            "263": 4,
+            "264": 4,
+            "265": 4,
+            "266": 4,
+            "267": 4,
+            "269": 4,
+            "271": 4,
+            "272": 4
+          },
+          "Branches": [
+            {
+              "Line": 260,
+              "Offset": 135,
+              "EndOffset": 137,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 260,
+              "Offset": 135,
+              "EndOffset": 205,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 4
+            }
+          ]
+        }
+      },
+      "BusinessLayer.Implementations.QuestionAnswer": {
+        "System.Int32 BusinessLayer.Implementations.QuestionAnswer::get_QuestionId()": {
+          "Lines": {
+            "277": 230
+          },
+          "Branches": []
+        },
+        "System.Boolean BusinessLayer.Implementations.QuestionAnswer::get_IsCorrect()": {
+          "Lines": {
+            "278": 208
+          },
+          "Branches": []
+        },
+        "System.Boolean BusinessLayer.Implementations.QuestionAnswer::get_IsMarked()": {
+          "Lines": {
+            "279": 104
+          },
+          "Branches": []
+        }
+      }
+    },
+    "/Users/kemaltaskin/Projects/Quiz/BusinessLayer/Implementations/QuizManager.cs": {
+      "BusinessLayer.Implementations.QuizManager": {
+        "System.Void BusinessLayer.Implementations.QuizManager::.ctor(BusinessLayer.Context.QuizContext,Common.Interfaces.ILogManager)": {
+          "Lines": {
+            "21": 24,
+            "22": 24,
+            "23": 24
+          },
+          "Branches": []
+        }
+      },
+      "BusinessLayer.Implementations.QuizManager/<>c__DisplayClass1_1": {
+        "System.Boolean BusinessLayer.Implementations.QuizManager/<>c__DisplayClass1_1::<GetUserQuizList>b__15(Models.DbModels.QuizAttempt)": {
+          "Lines": {
+            "50": 0
+          },
+          "Branches": []
+        }
+      },
+      "BusinessLayer.Implementations.QuizManager/<GetUserQuizList>d__1": {
+        "System.Void BusinessLayer.Implementations.QuizManager/<GetUserQuizList>d__1::MoveNext()": {
+          "Lines": {
+            "31": 0,
+            "34": 0,
+            "35": 0,
+            "36": 0,
+            "37": 0,
+            "39": 0,
+            "40": 0,
+            "41": 0,
+            "42": 0,
+            "43": 0,
+            "44": 0,
+            "45": 0,
+            "48": 0,
+            "49": 0,
+            "51": 0,
+            "53": 0,
+            "54": 0
+          },
+          "Branches": [
+            {
+              "Line": 48,
+              "Offset": 2009,
+              "EndOffset": 1911,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            },
+            {
+              "Line": 48,
+              "Offset": 2009,
+              "EndOffset": 2011,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            }
+          ]
+        }
+      },
+      "BusinessLayer.Implementations.QuizManager/<InsertQuizInternalAsync>d__2": {
+        "System.Void BusinessLayer.Implementations.QuizManager/<InsertQuizInternalAsync>d__2::MoveNext()": {
+          "Lines": {
+            "57": 72,
+            "58": 72,
+            "59": 72,
+            "60": 72,
+            "61": 72,
+            "62": 72,
+            "64": 72,
+            "66": 72,
+            "67": 72,
+            "68": 72,
+            "70": 72,
+            "72": 72,
+            "74": 72,
+            "75": 72
+          },
+          "Branches": [
+            {
+              "Line": 58,
+              "Offset": 114,
+              "EndOffset": 116,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 58,
+              "Offset": 114,
+              "EndOffset": 184,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 72
+            },
+            {
+              "Line": 70,
+              "Offset": 443,
+              "EndOffset": 445,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 0
+            },
+            {
+              "Line": 70,
+              "Offset": 443,
+              "EndOffset": 515,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 72
+            }
+          ]
+        }
+      }
+    },
+    "/Users/kemaltaskin/Projects/Quiz/BusinessLayer/Implementations/UserManager.cs": {
+      "BusinessLayer.Implementations.UserManager": {
+        "System.Void BusinessLayer.Implementations.UserManager::.ctor(BusinessLayer.Context.QuizContext,BusinessLayer.Interfaces.IAuthManager,Common.Interfaces.ILogManager,Common.Interfaces.IEmailManager)": {
+          "Lines": {
+            "31": 80,
+            "32": 80,
+            "33": 80,
+            "34": 80,
+            "35": 80
+          },
+          "Branches": []
+        }
+      },
+      "BusinessLayer.Implementations.UserManager/<SendPasswordResetEmail>d__3": {
+        "System.Void BusinessLayer.Implementations.UserManager/<SendPasswordResetEmail>d__3::MoveNext()": {
+          "Lines": {
+            "43": 6,
+            "44": 6,
+            "46": 6,
+            "47": 4,
+            "48": 4,
+            "51": 2,
+            "53": 2,
+            "55": 2,
+            "57": 2,
+            "58": 6
+          },
+          "Branches": [
+            {
+              "Line": 46,
+              "Offset": 345,
+              "EndOffset": 347,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 4
+            },
+            {
+              "Line": 46,
+              "Offset": 345,
+              "EndOffset": 355,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 2
+            }
+          ]
+        }
+      },
+      "BusinessLayer.Implementations.UserManager/<UpdatePassword>d__4": {
+        "System.Void BusinessLayer.Implementations.UserManager/<UpdatePassword>d__4::MoveNext()": {
+          "Lines": {
+            "67": 10,
+            "68": 10,
+            "69": 10,
+            "70": 10,
+            "71": 10,
+            "72": 10,
+            "73": 10,
+            "75": 10,
+            "76": 4,
+            "77": 4,
+            "80": 6,
+            "82": 6,
+            "83": 2,
+            "84": 2,
+            "86": 2,
+            "88": 2,
+            "90": 2,
+            "92": 4,
+            "94": 4,
+            "95": 10
+          },
+          "Branches": [
+            {
+              "Line": 68,
+              "Offset": 101,
+              "EndOffset": 106,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 10
+            },
+            {
+              "Line": 75,
+              "Offset": 525,
+              "EndOffset": 527,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 4
+            },
+            {
+              "Line": 75,
+              "Offset": 525,
+              "EndOffset": 535,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 6
+            },
+            {
+              "Line": 82,
+              "Offset": 850,
+              "EndOffset": 855,
+              "Path": 0,
+              "Ordinal": 4,
+              "Hits": 2
+            },
+            {
+              "Line": 82,
+              "Offset": 850,
+              "EndOffset": 1154,
+              "Path": 1,
+              "Ordinal": 5,
+              "Hits": 4
+            },
+            {
+              "Line": 68,
+              "Offset": 101,
+              "EndOffset": 1169,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 4
+            }
+          ]
+        }
+      },
+      "BusinessLayer.Implementations.UserManager/<UpdatePassword>d__5": {
+        "System.Void BusinessLayer.Implementations.UserManager/<UpdatePassword>d__5::MoveNext()": {
+          "Lines": {
+            "104": 8,
+            "105": 8,
+            "106": 2,
+            "107": 2,
+            "110": 6,
+            "112": 6,
+            "113": 2,
+            "114": 2,
+            "117": 4,
+            "119": 4,
+            "121": 4,
+            "123": 4,
+            "124": 8
+          },
+          "Branches": [
+            {
+              "Line": 105,
+              "Offset": 45,
+              "EndOffset": 47,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 2
+            },
+            {
+              "Line": 105,
+              "Offset": 45,
+              "EndOffset": 55,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 6
+            },
+            {
+              "Line": 110,
+              "Offset": 113,
+              "EndOffset": 115,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 0
+            },
+            {
+              "Line": 110,
+              "Offset": 113,
+              "EndOffset": 183,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 6
+            },
+            {
+              "Line": 112,
+              "Offset": 228,
+              "EndOffset": 230,
+              "Path": 0,
+              "Ordinal": 4,
+              "Hits": 2
+            },
+            {
+              "Line": 112,
+              "Offset": 228,
+              "EndOffset": 238,
+              "Path": 1,
+              "Ordinal": 5,
+              "Hits": 4
+            }
+          ]
+        }
+      },
+      "BusinessLayer.Implementations.UserManager/<DeleteUserAsync>d__6": {
+        "System.Void BusinessLayer.Implementations.UserManager/<DeleteUserAsync>d__6::MoveNext()": {
+          "Lines": {
+            "132": 4,
+            "133": 4,
+            "135": 4,
+            "136": 2,
+            "137": 2,
+            "140": 2,
+            "142": 2,
+            "144": 2,
+            "145": 4
+          },
+          "Branches": [
+            {
+              "Line": 133,
+              "Offset": 83,
+              "EndOffset": 85,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 133,
+              "Offset": 83,
+              "EndOffset": 153,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 4
+            },
+            {
+              "Line": 135,
+              "Offset": 198,
+              "EndOffset": 200,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 2
+            },
+            {
+              "Line": 135,
+              "Offset": 198,
+              "EndOffset": 208,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 2
+            }
+          ]
+        }
+      },
+      "BusinessLayer.Implementations.UserManager/<InsertUserAsync>d__7": {
+        "System.Void BusinessLayer.Implementations.UserManager/<InsertUserAsync>d__7::MoveNext()": {
+          "Lines": {
+            "153": 6,
+            "154": 6,
+            "156": 6,
+            "157": 4,
+            "158": 4,
+            "160": 4,
+            "161": 2,
+            "162": 2,
+            "165": 2,
+            "167": 2,
+            "169": 2,
+            "172": 2,
+            "173": 6
+          },
+          "Branches": [
+            {
+              "Line": 156,
+              "Offset": 357,
+              "EndOffset": 362,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 4
+            },
+            {
+              "Line": 160,
+              "Offset": 510,
+              "EndOffset": 512,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 2
+            },
+            {
+              "Line": 160,
+              "Offset": 510,
+              "EndOffset": 526,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 2
+            },
+            {
+              "Line": 156,
+              "Offset": 357,
+              "EndOffset": 818,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 2
+            }
+          ]
+        }
+      },
+      "BusinessLayer.Implementations.UserManager/<UpdateUserAsync>d__8": {
+        "System.Void BusinessLayer.Implementations.UserManager/<UpdateUserAsync>d__8::MoveNext()": {
+          "Lines": {
+            "182": 4,
+            "183": 4,
+            "185": 4,
+            "186": 2,
+            "187": 2,
+            "190": 2,
+            "191": 2,
+            "192": 2,
+            "194": 2,
+            "196": 2,
+            "198": 2,
+            "199": 4
+          },
+          "Branches": [
+            {
+              "Line": 183,
+              "Offset": 83,
+              "EndOffset": 85,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 183,
+              "Offset": 83,
+              "EndOffset": 153,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 4
+            },
+            {
+              "Line": 185,
+              "Offset": 198,
+              "EndOffset": 200,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 2
+            },
+            {
+              "Line": 185,
+              "Offset": 198,
+              "EndOffset": 208,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 2
+            }
+          ]
+        }
+      },
+      "BusinessLayer.Implementations.UserManager/<SendAccountVerificationEmail>d__9": {
+        "System.Void BusinessLayer.Implementations.UserManager/<SendAccountVerificationEmail>d__9::MoveNext()": {
+          "Lines": {
+            "207": 8,
+            "208": 8,
+            "210": 8,
+            "211": 4,
+            "212": 4,
+            "215": 4,
+            "217": 4,
+            "219": 4,
+            "220": 8
+          },
+          "Branches": [
+            {
+              "Line": 210,
+              "Offset": 345,
+              "EndOffset": 347,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 4
+            },
+            {
+              "Line": 210,
+              "Offset": 345,
+              "EndOffset": 355,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 4
+            }
+          ]
+        }
+      },
+      "BusinessLayer.Implementations.UserManager/<VerifyAccount>d__10": {
+        "System.Void BusinessLayer.Implementations.UserManager/<VerifyAccount>d__10::MoveNext()": {
+          "Lines": {
+            "228": 10,
+            "229": 10,
+            "230": 10,
+            "231": 10,
+            "232": 10,
+            "234": 10,
+            "235": 6,
+            "236": 6,
+            "239": 4,
+            "241": 4,
+            "242": 2,
+            "243": 2,
+            "246": 2,
+            "248": 2,
+            "250": 2,
+            "252": 2,
+            "254": 2,
+            "256": 2,
+            "257": 10
+          },
+          "Branches": [
+            {
+              "Line": 234,
+              "Offset": 502,
+              "EndOffset": 504,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 6
+            },
+            {
+              "Line": 234,
+              "Offset": 502,
+              "EndOffset": 512,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 4
+            },
+            {
+              "Line": 241,
+              "Offset": 823,
+              "EndOffset": 825,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 2
+            },
+            {
+              "Line": 241,
+              "Offset": 823,
+              "EndOffset": 833,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 2
+            }
+          ]
+        }
+      },
+      "BusinessLayer.Implementations.UserManager/<InsertUserInternalAsync>d__11": {
+        "System.Void BusinessLayer.Implementations.UserManager/<InsertUserInternalAsync>d__11::MoveNext()": {
+          "Lines": {
+            "260": 120,
+            "261": 120,
+            "262": 2,
+            "263": 2,
+            "266": 118,
+            "268": 118,
+            "269": 118,
+            "270": 118,
+            "271": 118,
+            "272": 118,
+            "273": 118,
+            "274": 118,
+            "275": 118,
+            "276": 118,
+            "278": 118,
+            "280": 118,
+            "281": 120
+          },
+          "Branches": [
+            {
+              "Line": 261,
+              "Offset": 50,
+              "EndOffset": 52,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 2
+            },
+            {
+              "Line": 261,
+              "Offset": 50,
+              "EndOffset": 60,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 118
+            },
+            {
+              "Line": 268,
+              "Offset": 233,
+              "EndOffset": 235,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 0
+            },
+            {
+              "Line": 268,
+              "Offset": 233,
+              "EndOffset": 303,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 118
+            }
+          ]
+        }
+      },
+      "BusinessLayer.Implementations.UserManager/<InsertOneTimeTokenAsync>d__12": {
+        "System.Void BusinessLayer.Implementations.UserManager/<InsertOneTimeTokenAsync>d__12::MoveNext()": {
+          "Lines": {
+            "284": 6,
+            "285": 6,
+            "287": 6,
+            "288": 6,
+            "289": 6,
+            "290": 6,
+            "291": 6,
+            "292": 6,
+            "293": 6,
+            "295": 6,
+            "297": 6,
+            "298": 6
+          },
+          "Branches": [
+            {
+              "Line": 287,
+              "Offset": 166,
+              "EndOffset": 168,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 287,
+              "Offset": 166,
+              "EndOffset": 236,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 6
+            }
+          ]
+        }
+      }
+    },
+    "/Users/kemaltaskin/Projects/Quiz/BusinessLayer/Context/QuizContext.cs": {
+      "BusinessLayer.Context.QuizContext": {
+        "System.Void BusinessLayer.Context.QuizContext::OnModelCreating(Microsoft.EntityFrameworkCore.ModelBuilder)": {
+          "Lines": {
+            "24": 2,
+            "25": 2,
+            "26": 2,
+            "28": 2,
+            "29": 2,
+            "31": 2,
+            "32": 2,
+            "34": 2,
+            "35": 2,
+            "37": 2,
+            "38": 2,
+            "39": 2,
+            "40": 2,
+            "42": 2,
+            "43": 2,
+            "45": 2,
+            "46": 2,
+            "47": 2,
+            "48": 2,
+            "50": 2,
+            "51": 2,
+            "53": 2,
+            "54": 2,
+            "55": 2,
+            "56": 2,
+            "58": 2,
+            "59": 2,
+            "60": 2,
+            "61": 2,
+            "63": 2,
+            "64": 2,
+            "66": 2,
+            "67": 2,
+            "68": 2,
+            "69": 2,
+            "71": 2,
+            "72": 2,
+            "74": 2,
+            "75": 2,
+            "77": 2,
+            "78": 2,
+            "80": 2,
+            "81": 2,
+            "82": 2,
+            "83": 2,
+            "85": 2,
+            "86": 2,
+            "87": 2,
+            "88": 2,
+            "90": 2,
+            "91": 2,
+            "93": 2,
+            "94": 2,
+            "95": 2,
+            "96": 2,
+            "98": 2,
+            "99": 2,
+            "100": 2,
+            "101": 2,
+            "103": 2,
+            "104": 2,
+            "106": 2,
+            "107": 2,
+            "108": 2,
+            "109": 2,
+            "111": 2,
+            "112": 2,
+            "113": 2,
+            "114": 2,
+            "116": 2,
+            "117": 2,
+            "118": 2,
+            "119": 2,
+            "120": 2
+          },
+          "Branches": []
+        },
+        "Microsoft.EntityFrameworkCore.DbSet`1<Models.DbModels.User> BusinessLayer.Context.QuizContext::get_Users()": {
+          "Lines": {
+            "125": 416
+          },
+          "Branches": []
+        },
+        "Microsoft.EntityFrameworkCore.DbSet`1<Models.DbModels.UserToken> BusinessLayer.Context.QuizContext::get_UserTokens()": {
+          "Lines": {
+            "130": 156
+          },
+          "Branches": []
+        },
+        "Microsoft.EntityFrameworkCore.DbSet`1<Models.DbModels.OneTimeToken> BusinessLayer.Context.QuizContext::get_OneTimeTokens()": {
+          "Lines": {
+            "135": 174
+          },
+          "Branches": []
+        },
+        "Microsoft.EntityFrameworkCore.DbSet`1<Models.DbModels.Quiz> BusinessLayer.Context.QuizContext::get_Quizes()": {
+          "Lines": {
+            "140": 214
+          },
+          "Branches": []
+        },
+        "Microsoft.EntityFrameworkCore.DbSet`1<Models.DbModels.QuizIdentity> BusinessLayer.Context.QuizContext::get_QuizIdentities()": {
+          "Lines": {
+            "145": 180
+          },
+          "Branches": []
+        },
+        "Microsoft.EntityFrameworkCore.DbSet`1<Models.DbModels.QuizAttempt> BusinessLayer.Context.QuizContext::get_QuizAttempts()": {
+          "Lines": {
+            "150": 160
+          },
+          "Branches": []
+        },
+        "Microsoft.EntityFrameworkCore.DbSet`1<Models.DbModels.QuizAssignment> BusinessLayer.Context.QuizContext::get_QuizAssignments()": {
+          "Lines": {
+            "155": 134
+          },
+          "Branches": []
+        },
+        "Microsoft.EntityFrameworkCore.DbSet`1<Models.DbModels.Question> BusinessLayer.Context.QuizContext::get_Questions()": {
+          "Lines": {
+            "160": 138
+          },
+          "Branches": []
+        },
+        "Microsoft.EntityFrameworkCore.DbSet`1<Models.DbModels.Option> BusinessLayer.Context.QuizContext::get_Options()": {
+          "Lines": {
+            "165": 178
+          },
+          "Branches": []
+        },
+        "Microsoft.EntityFrameworkCore.DbSet`1<Models.DbModels.QuestionOption> BusinessLayer.Context.QuizContext::get_QuestionOptions()": {
+          "Lines": {
+            "170": 224
+          },
+          "Branches": []
+        },
+        "Microsoft.EntityFrameworkCore.DbSet`1<Models.DbModels.QuizQuestion> BusinessLayer.Context.QuizContext::get_QuizQuestions()": {
+          "Lines": {
+            "175": 162
+          },
+          "Branches": []
+        },
+        "Microsoft.EntityFrameworkCore.DbSet`1<Models.DbModels.Answer> BusinessLayer.Context.QuizContext::get_Answers()": {
+          "Lines": {
+            "180": 118
+          },
+          "Branches": []
+        },
+        "System.Void BusinessLayer.Context.QuizContext::.ctor(Microsoft.EntityFrameworkCore.DbContextOptions`1<BusinessLayer.Context.QuizContext>)": {
+          "Lines": {
+            "15": 108,
+            "16": 108,
+            "17": 108
+          },
+          "Branches": []
+        }
+      }
+    }
+  },
+  "WebCommon.dll": {
+    "/Users/kemaltaskin/Projects/Quiz/WebCommon/StartupHelper.cs": {
+      "WebCommon.StartupHelper": {
+        "System.Void WebCommon.StartupHelper::InjectDependencies(Microsoft.Extensions.DependencyInjection.IServiceCollection)": {
+          "Lines": {
+            "23": 1,
+            "24": 1,
+            "25": 1,
+            "26": 1,
+            "28": 1,
+            "29": 1,
+            "30": 1,
+            "31": 1,
+            "32": 1,
+            "33": 1,
+            "34": 1,
+            "35": 1
+          },
+          "Branches": []
+        },
+        "System.Void WebCommon.StartupHelper::ConfigureAppSettings(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.Configuration.IConfiguration)": {
+          "Lines": {
+            "43": 1,
+            "44": 1,
+            "45": 1
+          },
+          "Branches": []
+        },
+        "System.Void WebCommon.StartupHelper::SetNewtonsoftSerializerSettings(Newtonsoft.Json.JsonSerializerSettings)": {
+          "Lines": {
+            "52": 1,
+            "53": 1,
+            "54": 1,
+            "55": 1,
+            "56": 1,
+            "57": 1,
+            "58": 1
+          },
+          "Branches": []
+        }
+      }
+    },
+    "/Users/kemaltaskin/Projects/Quiz/WebCommon/Properties/Resources.Designer.cs": {
+      "WebCommon.Properties.Resources": {
+        "System.Resources.ResourceManager WebCommon.Properties.Resources::get_ResourceManager()": {
+          "Lines": {
+            "40": 0,
+            "41": 0,
+            "42": 0,
+            "43": 0,
+            "44": 0,
+            "45": 0,
+            "46": 0
+          },
+          "Branches": [
+            {
+              "Line": 41,
+              "Offset": 11,
+              "EndOffset": 13,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 41,
+              "Offset": 11,
+              "EndOffset": 47,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        },
+        "System.Globalization.CultureInfo WebCommon.Properties.Resources::get_Culture()": {
+          "Lines": {
+            "55": 0,
+            "56": 0,
+            "57": 0
+          },
+          "Branches": []
+        },
+        "System.Void WebCommon.Properties.Resources::set_Culture(System.Globalization.CultureInfo)": {
+          "Lines": {
+            "58": 0,
+            "59": 0,
+            "60": 0
+          },
+          "Branches": []
+        },
+        "System.String WebCommon.Properties.Resources::get_errAccountNotVerified()": {
+          "Lines": {
+            "67": 0,
+            "68": 0,
+            "69": 0
+          },
+          "Branches": []
+        },
+        "System.String WebCommon.Properties.Resources::get_errGeneral()": {
+          "Lines": {
+            "76": 0,
+            "77": 0,
+            "78": 0
+          },
+          "Branches": []
+        },
+        "System.String WebCommon.Properties.Resources::get_errInvalidController()": {
+          "Lines": {
+            "85": 0,
+            "86": 0,
+            "87": 0
+          },
+          "Branches": []
+        },
+        "System.String WebCommon.Properties.Resources::get_errInvalidToken()": {
+          "Lines": {
+            "94": 0,
+            "95": 0,
+            "96": 0
+          },
+          "Branches": []
+        },
+        "System.String WebCommon.Properties.Resources::get_errItemNotFound()": {
+          "Lines": {
+            "103": 0,
+            "104": 0,
+            "105": 0
+          },
+          "Branches": []
+        },
+        "System.String WebCommon.Properties.Resources::get_errMethodNotImplemented()": {
+          "Lines": {
+            "112": 0,
+            "113": 0,
+            "114": 0
+          },
+          "Branches": []
+        },
+        "System.Void WebCommon.Properties.Resources::.ctor()": {
+          "Lines": {
+            "32": 0,
+            "33": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "/Users/kemaltaskin/Projects/Quiz/WebCommon/BaseControllers/BaseController.cs": {
+      "WebCommon.BaseControllers.BaseController": {
+        "Models.TransferObjects.AuthToken WebCommon.BaseControllers.BaseController::get_Token()": {
+          "Lines": {
+            "17": 10
+          },
+          "Branches": []
+        }
+      }
+    },
+    "/Users/kemaltaskin/Projects/Quiz/WebCommon/BaseControllers/ControllerHelper.cs": {
+      "WebCommon.BaseControllers.ControllerHelper": {
+        "Microsoft.AspNetCore.Mvc.JsonResult WebCommon.BaseControllers.ControllerHelper::CreateResponse(T)": {
+          "Lines": {
+            "21": 9,
+            "22": 9,
+            "23": 9,
+            "24": 9,
+            "25": 9,
+            "26": 9,
+            "27": 9,
+            "28": 9,
+            "29": 9,
+            "30": 9,
+            "31": 9
+          },
+          "Branches": [
+            {
+              "Line": 22,
+              "Offset": 16,
+              "EndOffset": 18,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 1
+            },
+            {
+              "Line": 22,
+              "Offset": 16,
+              "EndOffset": 48,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 8
+            }
+          ]
+        },
+        "Microsoft.AspNetCore.Mvc.JsonResult WebCommon.BaseControllers.ControllerHelper::CreateErrorResponse(System.Net.HttpStatusCode,System.String)": {
+          "Lines": {
+            "40": 2,
+            "41": 2,
+            "42": 2,
+            "43": 2,
+            "44": 2,
+            "45": 2
+          },
+          "Branches": []
+        },
+        "System.Boolean WebCommon.BaseControllers.ControllerHelper::IsSimpleType(System.Type)": {
+          "Lines": {
+            "48": 25,
+            "49": 25,
+            "50": 1,
+            "51": 1,
+            "54": 24,
+            "55": 5,
+            "56": 5,
+            "59": 19,
+            "60": 19,
+            "61": 19,
+            "62": 19,
+            "63": 19,
+            "64": 19,
+            "65": 19,
+            "66": 19,
+            "67": 19,
+            "68": 19,
+            "69": 14,
+            "70": 14,
+            "73": 5,
+            "74": 5,
+            "75": 1,
+            "76": 1,
+            "79": 4,
+            "80": 25
+          },
+          "Branches": [
+            {
+              "Line": 49,
+              "Offset": 15,
+              "EndOffset": 17,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 1
+            },
+            {
+              "Line": 49,
+              "Offset": 15,
+              "EndOffset": 25,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 24
+            },
+            {
+              "Line": 54,
+              "Offset": 31,
+              "EndOffset": 33,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 20
+            },
+            {
+              "Line": 54,
+              "Offset": 31,
+              "EndOffset": 41,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 4
+            },
+            {
+              "Line": 54,
+              "Offset": 44,
+              "EndOffset": 46,
+              "Path": 0,
+              "Ordinal": 4,
+              "Hits": 5
+            },
+            {
+              "Line": 54,
+              "Offset": 44,
+              "EndOffset": 54,
+              "Path": 1,
+              "Ordinal": 5,
+              "Hits": 19
+            },
+            {
+              "Line": 59,
+              "Offset": 159,
+              "EndOffset": 161,
+              "Path": 0,
+              "Ordinal": 6,
+              "Hits": 14
+            },
+            {
+              "Line": 59,
+              "Offset": 159,
+              "EndOffset": 166,
+              "Path": 1,
+              "Ordinal": 7,
+              "Hits": 5
+            },
+            {
+              "Line": 73,
+              "Offset": 172,
+              "EndOffset": 174,
+              "Path": 0,
+              "Ordinal": 8,
+              "Hits": 3
+            },
+            {
+              "Line": 73,
+              "Offset": 195,
+              "EndOffset": 197,
+              "Path": 0,
+              "Ordinal": 10,
+              "Hits": 1
+            },
+            {
+              "Line": 73,
+              "Offset": 172,
+              "EndOffset": 212,
+              "Path": 1,
+              "Ordinal": 9,
+              "Hits": 4
+            },
+            {
+              "Line": 73,
+              "Offset": 195,
+              "EndOffset": 212,
+              "Path": 1,
+              "Ordinal": 11,
+              "Hits": 4
+            },
+            {
+              "Line": 73,
+              "Offset": 217,
+              "EndOffset": 219,
+              "Path": 0,
+              "Ordinal": 12,
+              "Hits": 1
+            },
+            {
+              "Line": 73,
+              "Offset": 217,
+              "EndOffset": 224,
+              "Path": 1,
+              "Ordinal": 13,
+              "Hits": 4
+            }
+          ]
+        }
+      }
+    },
+    "/Users/kemaltaskin/Projects/Quiz/WebCommon/Attributes/ExceptionHandler.cs": {
+      "WebCommon.Attributes.ExceptionHandlerAttribute": {
+        "System.Threading.Tasks.Task WebCommon.Attributes.ExceptionHandlerAttribute::OnExceptionAsync(Microsoft.AspNetCore.Mvc.Filters.ExceptionContext)": {
+          "Lines": {
+            "39": 1,
+            "40": 1,
+            "42": 1,
+            "44": 1,
+            "45": 1,
+            "47": 1,
+            "48": 1
+          },
+          "Branches": []
+        },
+        "System.ValueTuple`2<System.Net.HttpStatusCode,System.String> WebCommon.Attributes.ExceptionHandlerAttribute::ProcessException(System.Exception)": {
+          "Lines": {
+            "51": 3,
+            "52": 3,
+            "57": 3,
+            "58": 1,
+            "59": 1,
+            "60": 1,
+            "61": 1,
+            "63": 2,
+            "64": 2,
+            "65": 2,
+            "66": 2,
+            "68": 3,
+            "69": 3
+          },
+          "Branches": [
+            {
+              "Line": 57,
+              "Offset": 31,
+              "EndOffset": 33,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 1
+            },
+            {
+              "Line": 57,
+              "Offset": 31,
+              "EndOffset": 49,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 2
+            }
+          ]
+        },
+        "System.Void WebCommon.Attributes.ExceptionHandlerAttribute::.ctor(BusinessLayer.Interfaces.IContextManager,Common.Interfaces.ILogManager)": {
+          "Lines": {
+            "27": 3,
+            "28": 3,
+            "29": 3,
+            "30": 3,
+            "31": 3
+          },
+          "Branches": []
+        }
+      }
+    },
+    "/Users/kemaltaskin/Projects/Quiz/WebCommon/Attributes/ExecutionFilter.cs": {
+      "WebCommon.Attributes.ExecutionFilterAttribute": {
+        "System.Void WebCommon.Attributes.ExecutionFilterAttribute::OnActionExecuting(Microsoft.AspNetCore.Mvc.Filters.ActionExecutingContext)": {
+          "Lines": {
+            "45": 2,
+            "46": 2,
+            "47": 2,
+            "49": 2,
+            "51": 2,
+            "53": 2,
+            "54": 1,
+            "55": 1,
+            "56": 1,
+            "58": 1,
+            "59": 1,
+            "60": 1,
+            "61": 2
+          },
+          "Branches": [
+            {
+              "Line": 53,
+              "Offset": 107,
+              "EndOffset": 109,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 1
+            },
+            {
+              "Line": 53,
+              "Offset": 107,
+              "EndOffset": 121,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 1
+            }
+          ]
+        },
+        "System.Void WebCommon.Attributes.ExecutionFilterAttribute::RetrieveParameters(Microsoft.AspNetCore.Http.IHeaderDictionary,System.String&)": {
+          "Lines": {
+            "106": 7,
+            "107": 7,
+            "108": 7,
+            "109": 3,
+            "110": 3,
+            "111": 3,
+            "113": 4,
+            "114": 4,
+            "115": 4,
+            "116": 7
+          },
+          "Branches": [
+            {
+              "Line": 108,
+              "Offset": 26,
+              "EndOffset": 28,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 5
+            },
+            {
+              "Line": 108,
+              "Offset": 26,
+              "EndOffset": 43,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 2
+            },
+            {
+              "Line": 108,
+              "Offset": 46,
+              "EndOffset": 48,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 3
+            },
+            {
+              "Line": 108,
+              "Offset": 46,
+              "EndOffset": 71,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 4
+            }
+          ]
+        },
+        "System.String WebCommon.Attributes.ExecutionFilterAttribute::GetHeader(Microsoft.AspNetCore.Http.IHeaderDictionary,System.String,System.String)": {
+          "Lines": {
+            "119": 7,
+            "120": 7,
+            "121": 7
+          },
+          "Branches": [
+            {
+              "Line": 120,
+              "Offset": 8,
+              "EndOffset": 10,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 1
+            },
+            {
+              "Line": 120,
+              "Offset": 8,
+              "EndOffset": 13,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 6
+            }
+          ]
+        },
+        "System.Void WebCommon.Attributes.ExecutionFilterAttribute::SetCulture(System.Threading.Thread)": {
+          "Lines": {
+            "124": 3,
+            "125": 3,
+            "126": 3,
+            "127": 3
+          },
+          "Branches": []
+        },
+        "System.Boolean WebCommon.Attributes.ExecutionFilterAttribute::ProceedWithExecution(System.Boolean,System.Boolean,System.Boolean)": {
+          "Lines": {
+            "130": 6,
+            "131": 6,
+            "132": 6
+          },
+          "Branches": [
+            {
+              "Line": 131,
+              "Offset": 2,
+              "EndOffset": 4,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 4
+            },
+            {
+              "Line": 131,
+              "Offset": 2,
+              "EndOffset": 12,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 2
+            }
+          ]
+        },
+        "System.Boolean WebCommon.Attributes.ExecutionFilterAttribute::HasAuthenticateAttribute(Microsoft.AspNetCore.Mvc.Controllers.ControllerActionDescriptor)": {
+          "Lines": {
+            "135": 6,
+            "136": 7,
+            "137": 6
+          },
+          "Branches": [
+            {
+              "Line": 136,
+              "Offset": 2,
+              "EndOffset": 4,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 1
+            },
+            {
+              "Line": 136,
+              "Offset": 2,
+              "EndOffset": 15,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 5
+            },
+            {
+              "Line": 136,
+              "Offset": 22,
+              "EndOffset": 24,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 3
+            },
+            {
+              "Line": 136,
+              "Offset": 22,
+              "EndOffset": 36,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 2
+            }
+          ]
+        },
+        "System.Void WebCommon.Attributes.ExecutionFilterAttribute::.ctor(BusinessLayer.Interfaces.IAuthManager,BusinessLayer.Interfaces.IContextManager,System.Boolean)": {
+          "Lines": {
+            "33": 7,
+            "34": 7,
+            "35": 7,
+            "36": 7,
+            "37": 7,
+            "38": 7
+          },
+          "Branches": []
+        }
+      },
+      "WebCommon.Attributes.ExecutionFilterAttribute/<ValidateRequest>d__5": {
+        "System.Void WebCommon.Attributes.ExecutionFilterAttribute/<ValidateRequest>d__5::MoveNext()": {
+          "Lines": {
+            "64": 7,
+            "67": 7,
+            "68": 6,
+            "69": 6,
+            "70": 5,
+            "71": 5,
+            "72": 5,
+            "73": 3,
+            "74": 3,
+            "75": 2,
+            "76": 2,
+            "77": 2,
+            "79": 1,
+            "80": 1,
+            "81": 1,
+            "83": 2,
+            "85": 2,
+            "86": 2,
+            "87": 2,
+            "89": 2,
+            "91": 1,
+            "92": 1,
+            "93": 1,
+            "95": 2,
+            "97": 1,
+            "98": 1,
+            "99": 1,
+            "102": 2,
+            "103": 7
+          },
+          "Branches": [
+            {
+              "Line": 67,
+              "Offset": 26,
+              "EndOffset": 31,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 6
+            },
+            {
+              "Line": 69,
+              "Offset": 43,
+              "EndOffset": 48,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 5
+            },
+            {
+              "Line": 72,
+              "Offset": 202,
+              "EndOffset": 204,
+              "Path": 0,
+              "Ordinal": 4,
+              "Hits": 3
+            },
+            {
+              "Line": 74,
+              "Offset": 220,
+              "EndOffset": 222,
+              "Path": 0,
+              "Ordinal": 6,
+              "Hits": 2
+            },
+            {
+              "Line": 74,
+              "Offset": 220,
+              "EndOffset": 244,
+              "Path": 1,
+              "Ordinal": 7,
+              "Hits": 1
+            },
+            {
+              "Line": 72,
+              "Offset": 202,
+              "EndOffset": 277,
+              "Path": 1,
+              "Ordinal": 5,
+              "Hits": 2
+            },
+            {
+              "Line": 69,
+              "Offset": 43,
+              "EndOffset": 314,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 1
+            },
+            {
+              "Line": 67,
+              "Offset": 26,
+              "EndOffset": 344,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 1
+            }
+          ]
+        }
+      }
+    }
+  }
+}
