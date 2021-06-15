@@ -50,7 +50,7 @@ namespace WebCommon
             serializerSettings.DateTimeZoneHandling = DateTimeZoneHandling.Utc;
             serializerSettings.DateFormatString = "yyyy'-'MM'-'dd'T'HH':'mm':'ss";
             serializerSettings.Converters.Add(new Newtonsoft.Json.Converters.StringEnumConverter());
-            serializerSettings.NullValueHandling = NullValueHandling.Ignore;
+            serializerSettings.NullValueHandling = NullValueHandling.Include;
         }
     }
 }

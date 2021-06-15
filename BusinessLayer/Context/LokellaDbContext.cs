@@ -51,6 +51,39 @@ namespace BusinessLayer.Context
 
             modelBuilder.Entity<MenuCategory>()
                 .HasKey(c => c.Id);
+
+            modelBuilder.Entity<MenuItem>()
+                .HasKey(c => c.Id);
+
+            modelBuilder.Entity<CatalogAdditive>()
+                .HasKey(c => c.Id);
+
+            modelBuilder.Entity<CatalogAllergy>()
+                .HasKey(c => c.Id);
+
+            modelBuilder.Entity<CatalogMenuItemTag>()
+                .HasKey(c => c.Id);
+
+            modelBuilder.Entity<MenuItemAdditive>()
+                .HasKey(c => new { c.MenuItemId, c.AdditiveId });
+
+            modelBuilder.Entity<MenuItemAllergy>()
+                .HasKey(c => new { c.MenuItemId, c.AllergyId });
+
+            modelBuilder.Entity<MenuItemTag>()
+                .HasKey(c => new { c.MenuItemId, c.TagId });
+
+            modelBuilder.Entity<MenuItemPrice>()
+                .HasKey(c => c.Id);
+
+            modelBuilder.Entity<MenuItemPrice>()
+                .Property(c => c.Quantity)
+                .HasPrecision(5, 2);
+
+            modelBuilder.Entity<MenuItemPrice>()
+                .Property(c => c.Price)
+                .HasPrecision(5, 2);
+
         }
 
         /// <summary>
@@ -82,5 +115,45 @@ namespace BusinessLayer.Context
         /// 
         /// </summary>
         public DbSet<MenuCategory> MenuCategories { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public DbSet<MenuItem> MenuItems { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public DbSet<CatalogAdditive> CatalogAdditives { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public DbSet<CatalogAllergy> CatalogAllergies { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public DbSet<CatalogMenuItemTag> CatalogMenuItemTags { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public DbSet<MenuItemAdditive> MenuItemAdditives { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public DbSet<MenuItemAllergy> MenuItemAllergies { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public DbSet<MenuItemTag> MenuItemTags { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public DbSet<MenuItemPrice> MenuItemPrices { get; set; }
     }
 }
