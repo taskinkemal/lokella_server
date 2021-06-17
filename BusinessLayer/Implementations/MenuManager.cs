@@ -21,23 +21,28 @@ namespace BusinessLayer.Implementations
         {
         }
 
-        public async Task<List<MenuCategory>> GetBusinessMenuCategories(int businessId)
+        public async Task<List<MenuCategory>> GetBusinessMenuCategories(int businessId, bool fetchAll, int? parentId)
         {
             return await Context.MenuCategories
-                .Where(q => q.BusinessId == businessId)
+                .Where(q => q.BusinessId == businessId && (fetchAll || q.ParentId == parentId))
                 .OrderBy(q => q.ItemOrder)
                 .ToListAsync();
         }
 
         public async Task<List<MenuItemTo>> GetMenuItems(int categoryId)
         {
-            var items = Context.MenuItems
-                .Where(q => q.CategoryId == categoryId)
-                .Select(q => new MenuItemTo
-                {
-                    Item = q
-                })
-                .OrderBy(q => q.Item.ItemOrder)
+            var items = (from item in Context.MenuItems
+                               join cat in Context.MenuCategories on item.CategoryId equals cat.Id
+                               where cat.Id == categoryId || cat.ParentId == categoryId
+                               select new MenuItemTo
+                               {
+                                   Item = item,
+                                   Category = cat
+                               })
+
+                .AsQueryable()
+                .OrderBy(q => q.Category.Id)
+                .ThenBy(q => q.Item.ItemOrder)
                 .AsQueryable();
 
 

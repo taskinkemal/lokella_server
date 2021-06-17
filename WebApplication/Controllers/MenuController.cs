@@ -23,7 +23,7 @@ namespace WebApplication.Controllers
         [Route("/Menu/Businesses/{id}")]
         public async Task<List<MenuCategory>> GetMenuCategories(int id)
         {
-            return await menuManager.GetBusinessMenuCategories(id);
+            return await menuManager.GetBusinessMenuCategories(id, false, null);
         }
 
         [HttpGet]

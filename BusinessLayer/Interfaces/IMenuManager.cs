@@ -8,7 +8,7 @@ namespace BusinessLayer.Interfaces
 {
     public interface IMenuManager : IDependency
     {
-        Task<List<MenuCategory>> GetBusinessMenuCategories(int businessId);
+        Task<List<MenuCategory>> GetBusinessMenuCategories(int businessId, bool fetchAll, int? parentId);
 
         Task<List<MenuItemTo>> GetMenuItems(int categoryId);
     }

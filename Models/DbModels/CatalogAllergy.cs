@@ -3,18 +3,7 @@
 namespace Models.DbModels
 {
     [DataContract]
-    public class CatalogAllergy
+    public class CatalogAllergy : CatalogAllergyAdditive
     {
-        /// <summary>
-        /// 
-        /// </summary>
-        [DataMember]
-        public short Id { get; set; }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        [DataMember]
-        public string Name { get; set; }
     }
 }

@@ -29,5 +29,11 @@ namespace Models.DbModels
         [DataMember]
         public int ItemOrder { get; set; }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        [DataMember]
+        public int? ParentId { get; set; }
+
     }
 }

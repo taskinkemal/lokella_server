@@ -3,7 +3,7 @@
 namespace Models.DbModels
 {
     [DataContract]
-    public class CatalogAdditive
+    public class CatalogAllergyAdditive
     {
         /// <summary>
         /// 
@@ -15,12 +15,12 @@ namespace Models.DbModels
         /// 
         /// </summary>
         [DataMember]
-        public string ShortName { get; set; }
+        public string Name { get; set; }
 
         /// <summary>
         /// 
         /// </summary>
         [DataMember]
-        public string Name { get; set; }
+        public string ShortName { get; set; }
     }
 }
