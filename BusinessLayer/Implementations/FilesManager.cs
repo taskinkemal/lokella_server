@@ -26,5 +26,21 @@ namespace BusinessLayer.Implementations
                 .Where(q => q.Id == fileId)
                 .FirstOrDefaultAsync();
         }
+
+        public async Task<int> UploadFile(Models.TransferObjects.File file)
+        {
+            var bytes = Convert.FromBase64String(file.FileBase64);
+
+            var fileEntity = await Context.StoredFiles.AddAsync(new StoredFile
+            {
+                MimeType = "",
+                FileName = "angebot",
+                FileContent = bytes
+            });
+
+            await Context.SaveChangesAsync();
+
+            return fileEntity.Entity.Id;
+        }
     }
 }

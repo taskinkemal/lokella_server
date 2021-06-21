@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Drawing;
 using System.IO;
 using System.Linq;
@@ -89,6 +90,25 @@ namespace BusinessLayer.Implementations
 
             return businessDb.Entity.Id;
 
+        }
+
+        public async Task<List<SpecialOffer>> GetSpecialOffers(int businessId, bool isActive)
+        {
+            var now = DateTime.Now;
+
+            var all = Context.SpecialOffers.ToList();
+
+            var list = await Context.SpecialOffers
+                .Where(q => q.BusinessId == businessId)
+                .ToListAsync();
+
+            if (isActive)
+            {
+                return list.Where(q => q.Status == 1 && q.DateFrom <= now && q.DateTo >= now && q.ActiveHours(now))
+                .ToList();
+            }
+
+            return list;
         }
 
         private static byte[] BitmapToBytesCode(Bitmap image)

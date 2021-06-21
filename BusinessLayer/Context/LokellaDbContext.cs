@@ -84,6 +84,9 @@ namespace BusinessLayer.Context
                 .Property(c => c.Price)
                 .HasPrecision(5, 2);
 
+            modelBuilder.Entity<SpecialOffer>()
+                .HasKey(c => c.Id);
+
         }
 
         /// <summary>
@@ -155,5 +158,10 @@ namespace BusinessLayer.Context
         /// 
         /// </summary>
         public DbSet<MenuItemPrice> MenuItemPrices { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public DbSet<SpecialOffer> SpecialOffers { get; set; }
     }
 }

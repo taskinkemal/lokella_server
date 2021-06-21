@@ -43,5 +43,23 @@ namespace Models.DbModels
         /// </summary>
         [DataMember]
         public int QrCodeId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [DataMember]
+        public string BackgroundColor { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [DataMember]
+        public string FontColor { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [DataMember]
+        public string MenuSectionColor { get; set; }
     }
 }

@@ -8,5 +8,7 @@ namespace BusinessLayer.Interfaces
     public interface IFilesManager : IDependency
     {
         Task<StoredFile> GetFile(int fileId);
+
+        Task<int> UploadFile(Models.TransferObjects.File file);
     }
 }

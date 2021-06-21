@@ -27,27 +27,33 @@ namespace BusinessLayer.Implementations
             this.emailManager = emailManager;
         }
 
-        public async Task<string> RegisterCustomerAndSendVerificationEmail(CustomerLogin customerLogin)
+        public async Task<int> RegisterCustomerAndSendVerificationEmail(CustomerLogin customerLogin)
         {
+            var customerId = 0;
+
             var existingCustomer = await Context.Customers
                 .Where(q => q.Email == customerLogin.Email)
                 .FirstOrDefaultAsync();
 
             if (existingCustomer == null)
             {
-                await Context.Customers.AddAsync(new Customer
+                var customer = await Context.Customers.AddAsync(new Customer
                 {
                     Email = customerLogin.Email,
                     FirstName = customerLogin.FirstName,
                     LastName = customerLogin.LastName,
                     PhoneNumber = customerLogin.PhoneNumber
                 });
+
+                customerId = customer.Entity.Id;
             }
             else
             {
                 existingCustomer.FirstName = customerLogin.FirstName;
                 existingCustomer.LastName = customerLogin.LastName;
                 existingCustomer.PhoneNumber = customerLogin.PhoneNumber;
+
+                customerId = existingCustomer.Id;
             }
 
             await Context.SaveChangesAsync();
@@ -56,7 +62,14 @@ namespace BusinessLayer.Implementations
                 +
                 "<a href='lokella://verify?code=" + customerLogin.DeviceId + "'>Dogrulama linki</a>");
 
-            return customerLogin.DeviceId;
+            return customerId;
+        }
+
+        public async Task<int> DeleteCustomer(int customerId)
+        {
+            await Task.Delay(10);
+
+            return 0;
         }
     }
 }

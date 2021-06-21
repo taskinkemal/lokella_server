@@ -40,9 +40,18 @@ namespace WebApplication.Controllers
         [ProducesResponseType(typeof(int), (int)HttpStatusCode.OK)]
         public async Task<JsonResult> Post([FromBody] CustomerLogin customerLogin)
         {
-            await customerManager.RegisterCustomerAndSendVerificationEmail(customerLogin);
+            var customerId = await customerManager.RegisterCustomerAndSendVerificationEmail(customerLogin);
 
-            return ControllerHelper.CreateResponse(98);
+            return ControllerHelper.CreateResponse(customerId);
+        }
+
+        [HttpDelete]
+        [ProducesResponseType(typeof(int), (int)HttpStatusCode.OK)]
+        public async Task<JsonResult> Delete(int id)
+        {
+            var result = await customerManager.DeleteCustomer(id);
+
+            return ControllerHelper.CreateResponse(result);
         }
     }
 }

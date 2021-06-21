@@ -9,6 +9,8 @@ namespace BusinessLayer.Interfaces
     /// </summary>
     public interface ICustomerManager : IDependency
     {
-        Task<string> RegisterCustomerAndSendVerificationEmail(CustomerLogin customerLogin);
+        Task<int> RegisterCustomerAndSendVerificationEmail(CustomerLogin customerLogin);
+
+        Task<int> DeleteCustomer(int customerId);
     }
 }

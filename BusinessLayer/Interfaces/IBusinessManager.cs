@@ -18,5 +18,7 @@ namespace BusinessLayer.Interfaces
         Task<Business> GetBusinessByQrCode(string qrCode);
 
         Task<int> InsertBusinessAsync(Models.TransferObjects.Business business);
+
+        Task<List<SpecialOffer>> GetSpecialOffers(int businessId, bool isActive);
     }
 }

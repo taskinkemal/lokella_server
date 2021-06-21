@@ -30,5 +30,13 @@ namespace WebApplication.Controllers
 
             return File(file.FileContent, "image/png");
         }
+
+        [HttpPut]
+        [ProducesResponseType(typeof(int), (int)HttpStatusCode.OK)]
+        public async Task<JsonResult> Put([FromBody] Models.TransferObjects.File file)
+        {
+            var fileId = await filesManager.UploadFile(file);
+            return ControllerHelper.CreateResponse(0);
+        }
     }
 }
