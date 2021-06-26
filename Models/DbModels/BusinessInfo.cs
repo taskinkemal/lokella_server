@@ -1,13 +1,12 @@
 ﻿using System.Runtime.Serialization;
-using Models.DbModels;
 
-namespace Models.TransferObjects
+namespace Models.DbModels
 {
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
-    public class Business
+    public class BusinessInfo
     {
         /// <summary>
         /// 
@@ -19,50 +18,49 @@ namespace Models.TransferObjects
         /// 
         /// </summary>
         [DataMember]
-        public string Name { get; set; }
+        public string FullName { get; set; }
 
         /// <summary>
         /// 
         /// </summary>
         [DataMember]
-        public short Level { get; set; }
+        public string PhoneNumber { get; set; }
 
         /// <summary>
         /// 
         /// </summary>
         [DataMember]
-        public short Category { get; set; }
+        public string Address { get; set; }
 
         /// <summary>
         /// 
         /// </summary>
         [DataMember]
-        public string LogoBase64 { get; set; }
+        public int PostCode { get; set; }
 
         /// <summary>
         /// 
         /// </summary>
         [DataMember]
-        public string BackgroundColor { get; set; }
+        public string City { get; set; }
 
         /// <summary>
         /// 
         /// </summary>
         [DataMember]
-        public string FontColor { get; set; }
+        public string WebSite { get; set; }
 
         /// <summary>
         /// 
         /// </summary>
         [DataMember]
-        public string MenuSectionColor { get; set; }
+        public string Facebook { get; set; }
 
         /// <summary>
         /// 
         /// </summary>
         [DataMember]
-        public BusinessInfo BusinessInfo { get; set; }
-
+        public string Instagram { get; set; }
 
     }
 }

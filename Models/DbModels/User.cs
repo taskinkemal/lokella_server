@@ -1,13 +1,12 @@
 ﻿using System.Runtime.Serialization;
-using Models.DbModels;
 
-namespace Models.TransferObjects
+namespace Models.DbModels
 {
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
-    public class Business
+    public class User
     {
         /// <summary>
         /// 
@@ -19,50 +18,37 @@ namespace Models.TransferObjects
         /// 
         /// </summary>
         [DataMember]
-        public string Name { get; set; }
+        public string FirstName { get; set; }
 
         /// <summary>
         /// 
         /// </summary>
         [DataMember]
-        public short Level { get; set; }
+        public string LastName { get; set; }
 
         /// <summary>
         /// 
         /// </summary>
         [DataMember]
-        public short Category { get; set; }
+        public short Role { get; set; }
 
         /// <summary>
         /// 
         /// </summary>
         [DataMember]
-        public string LogoBase64 { get; set; }
+        public string Email { get; set; }
 
         /// <summary>
         /// 
         /// </summary>
         [DataMember]
-        public string BackgroundColor { get; set; }
+        public byte[] PasswordHash { get; set; }
 
         /// <summary>
         /// 
         /// </summary>
         [DataMember]
-        public string FontColor { get; set; }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        [DataMember]
-        public string MenuSectionColor { get; set; }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        [DataMember]
-        public BusinessInfo BusinessInfo { get; set; }
-
+        public string PasswordSalt { get; set; }
 
     }
 }

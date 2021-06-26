@@ -33,6 +33,9 @@ namespace BusinessLayer.Context
             modelBuilder.Entity<Business>()
                 .HasKey(c => c.Id);
 
+            modelBuilder.Entity<BusinessInfo>()
+                .HasKey(c => c.Id);
+
             modelBuilder.Entity<BusinessCategory>()
                 .HasKey(c => c.Id);
 
@@ -87,6 +90,12 @@ namespace BusinessLayer.Context
             modelBuilder.Entity<SpecialOffer>()
                 .HasKey(c => c.Id);
 
+            modelBuilder.Entity<User>()
+                .HasKey(c => c.Id);
+
+            modelBuilder.Entity<UserToken>()
+                .HasKey(c => new { c.UserId, c.Token });
+
         }
 
         /// <summary>
@@ -98,6 +107,11 @@ namespace BusinessLayer.Context
         /// 
         /// </summary>
         public DbSet<Business> Businesses { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public DbSet<BusinessInfo> BusinessInfos { get; set; }
 
         /// <summary>
         /// 
@@ -163,5 +177,15 @@ namespace BusinessLayer.Context
         /// 
         /// </summary>
         public DbSet<SpecialOffer> SpecialOffers { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public DbSet<User> Users { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public DbSet<UserToken> UserTokens { get; set; }
     }
 }

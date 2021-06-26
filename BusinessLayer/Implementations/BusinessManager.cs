@@ -30,6 +30,15 @@ namespace BusinessLayer.Implementations
         /// <summary>
         /// 
         /// </summary>
+        /// <returns></returns>
+        public async Task<List<Business>> GetBusinesses()
+        {
+            return await Context.Businesses.ToListAsync();
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
         /// <param name="qrCode"></param>
         /// <returns></returns>
         public Task<Business> GetBusinessByQrCode(string qrCode)
@@ -61,7 +70,10 @@ namespace BusinessLayer.Implementations
                 Level = business.Level,
                 Category = business.Category,
                 LogoId = logoId,
-                QrCodeId = logoId
+                QrCodeId = logoId,
+                BackgroundColor = business.BackgroundColor,
+                FontColor = business.FontColor,
+                MenuSectionColor = business.MenuSectionColor
             });
 
             await Context.SaveChangesAsync();
@@ -88,6 +100,12 @@ namespace BusinessLayer.Implementations
 
             await Context.SaveChangesAsync();
 
+            business.BusinessInfo.Id = businessDb.Entity.Id;
+
+            await Context.BusinessInfos.AddAsync(business.BusinessInfo);
+
+            await Context.SaveChangesAsync();
+
             return businessDb.Entity.Id;
 
         }
@@ -109,6 +127,21 @@ namespace BusinessLayer.Implementations
             }
 
             return list;
+        }
+
+        public async Task<List<BusinessCategory>> GetBusinessCategories()
+        {
+            return await Context.BusinessCategories.OrderBy(q => q.Name).ToListAsync();
+        }
+
+        public async Task<List<MembershipLevel>> GetMembershipLevels()
+        {
+            return await Context.MembershipLevels.OrderBy(q => q.Level).ToListAsync();
+        }
+
+        public async Task<BusinessInfo> GetBusinessInfo(int businessId)
+        {
+            return await Context.BusinessInfos.FirstOrDefaultAsync(q => q.Id == businessId);
         }
 
         private static byte[] BitmapToBytesCode(Bitmap image)

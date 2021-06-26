@@ -10,6 +10,8 @@ namespace BusinessLayer.Interfaces
     /// </summary>
     public interface IBusinessManager : IDependency
     {
+        Task<List<Business>> GetBusinesses();
+
         /// <summary>
         /// 
         /// </summary>
@@ -20,5 +22,11 @@ namespace BusinessLayer.Interfaces
         Task<int> InsertBusinessAsync(Models.TransferObjects.Business business);
 
         Task<List<SpecialOffer>> GetSpecialOffers(int businessId, bool isActive);
+
+        Task<List<BusinessCategory>> GetBusinessCategories();
+
+        Task<List<MembershipLevel>> GetMembershipLevels();
+
+        Task<BusinessInfo> GetBusinessInfo(int businessId);
     }
 }

@@ -29,6 +29,7 @@ namespace WebCommon
             services.AddScoped<ICustomerManager, CustomerManager>();
             services.AddScoped<IFilesManager, FilesManager>();
             services.AddScoped<IMenuManager, MenuManager>();
+            services.AddScoped<IUserManager, UserManager>();
         }
 
         /// <summary>
