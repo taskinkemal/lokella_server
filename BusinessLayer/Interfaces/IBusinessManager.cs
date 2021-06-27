@@ -28,5 +28,9 @@ namespace BusinessLayer.Interfaces
         Task<List<MembershipLevel>> GetMembershipLevels();
 
         Task<BusinessInfo> GetBusinessInfo(int businessId);
+
+        Task<int> VisitBusiness(int businessId, int customerId);
+
+        Task<List<Models.TransferObjects.CustomerVisit>> GetCustomerVisits(int businessId);
     }
 }

@@ -52,10 +52,28 @@ namespace WebApplication.Controllers
         /// </summary>
         /// <returns></returns>
         [HttpGet]
-        [Route("/Businesses/{qrCode}")]
-        public async Task<Business> GetFromQrCode(string qrCode)
+        [Route("/Businesses/{qrCode}/Customer/{customerId}")]
+        public async Task<Business> GetFromQrCode(string qrCode, int customerId)
         {
-            return await businessManager.GetBusinessByQrCode(qrCode);
+            var business = await businessManager.GetBusinessByQrCode(qrCode);
+
+            if (business != null)
+            {
+                await businessManager.VisitBusiness(business.Id, customerId);
+            }
+
+            return business;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
+        [HttpGet]
+        [Route("/Businesses/{id}/CustomerVisits")]
+        public async Task<List<Models.TransferObjects.CustomerVisit>> GetCustomerVisits(int id)
+        {
+            return await businessManager.GetCustomerVisits(id);
         }
 
         [HttpPut]

@@ -144,6 +144,37 @@ namespace BusinessLayer.Implementations
             return await Context.BusinessInfos.FirstOrDefaultAsync(q => q.Id == businessId);
         }
 
+        public async Task<int> VisitBusiness(int businessId, int customerId)
+        {
+            await Context.CustomerVisits.AddAsync(new CustomerVisit
+            {
+                BusinessId = businessId,
+                CustomerId = customerId,
+                VisitDate = DateTime.Now
+            });
+
+            await Context.SaveChangesAsync();
+
+            return 1;
+        }
+
+        public async Task<List<Models.TransferObjects.CustomerVisit>> GetCustomerVisits(int businessId)
+        {
+            var visits = await (from visit in Context.CustomerVisits
+                         join customer in Context.Customers on visit.CustomerId equals customer.Id
+                         where visit.BusinessId == businessId
+                         select new Models.TransferObjects.CustomerVisit
+                         {
+                             Visitor = customer,
+                             VisitDate = visit.VisitDate
+                         })
+                .AsQueryable()
+                .OrderByDescending(q => q.VisitDate)
+                .ToListAsync();
+
+            return visits;
+        }
+
         private static byte[] BitmapToBytesCode(Bitmap image)
         {
             using (var stream = new MemoryStream())
