@@ -41,13 +41,11 @@ namespace Models.DbModels
         /// <summary>
         /// 
         /// </summary>
-        [DataMember]
         public byte[] PasswordHash { get; set; }
 
         /// <summary>
         /// 
         /// </summary>
-        [DataMember]
         public string PasswordSalt { get; set; }
 
     }

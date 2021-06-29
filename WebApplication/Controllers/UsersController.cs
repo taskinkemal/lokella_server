@@ -6,6 +6,7 @@ using Models.DbModels;
 using System.Net;
 using Models.TransferObjects;
 using System.Threading.Tasks;
+using WebCommon.Attributes;
 
 namespace WebApplication.Controllers
 {
@@ -38,6 +39,7 @@ namespace WebApplication.Controllers
 
         [HttpPost]
         [ProducesResponseType(typeof(string), (int)HttpStatusCode.OK)]
+        [Authenticate(Level = Common.AuthenticationLevel.NoAuthentication)]
         public async Task<JsonResult> Post([FromBody] TokenRequest tokenRequest)
         {
             var token = await userManager.Login(tokenRequest);

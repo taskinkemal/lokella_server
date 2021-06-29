@@ -16,15 +16,13 @@ namespace BusinessLayer.Implementations
         /// </summary>
         /// <param name="context"></param>
         /// <param name="logManager"></param>
-        public FilesManager(LokellaDbContext context, ILogManager logManager) : base(context, logManager)
+        public FilesManager(LokellaDbContext context, ICacheManager cacheManager, ILogManager logManager) : base(context, cacheManager, logManager)
         {
         }
 
         public Task<StoredFile> GetFile(int fileId)
         {
-            return Context.StoredFiles
-                .Where(q => q.Id == fileId)
-                .FirstOrDefaultAsync();
+            return CacheManager.GetFile(fileId);
         }
 
         public async Task<int> UploadFile(Models.TransferObjects.File file)

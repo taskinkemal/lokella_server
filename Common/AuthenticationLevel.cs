@@ -8,14 +8,18 @@
         /// <summary>
         /// 
         /// </summary>
-        NoAuthentication,
+        NoAuthentication = 1,
         /// <summary>
         /// 
         /// </summary>
-        User,
+        User = 2,
         /// <summary>
         /// 
         /// </summary>
-        Admin
+        UserAdmin = 3,
+        /// <summary>
+        /// 
+        /// </summary>
+        SystemAdmin = 4
     }
 }

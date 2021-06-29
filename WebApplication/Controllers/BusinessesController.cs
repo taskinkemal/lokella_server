@@ -1,5 +1,4 @@
-﻿using System.Collections.Generic;
-using System.Net;
+﻿using System.Net;
 using System.Threading.Tasks;
 using BusinessLayer.Interfaces;
 using Microsoft.AspNetCore.Mvc;
@@ -31,16 +30,6 @@ namespace WebApplication.Controllers
         /// </summary>
         /// <returns></returns>
         [HttpGet]
-        public async Task<List<Business>> Get()
-        {
-            return await businessManager.GetBusinesses();
-        }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <returns></returns>
-        [HttpGet]
         [Route("/Businesses/{id}/Info")]
         public async Task<BusinessInfo> GetBusinessInfo(int id)
         {
@@ -63,17 +52,6 @@ namespace WebApplication.Controllers
             }
 
             return business;
-        }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <returns></returns>
-        [HttpGet]
-        [Route("/Businesses/{id}/CustomerVisits")]
-        public async Task<List<Models.TransferObjects.CustomerVisit>> GetCustomerVisits(int id)
-        {
-            return await businessManager.GetCustomerVisits(id);
         }
 
         [HttpPut]

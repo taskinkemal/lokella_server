@@ -8,6 +8,6 @@ namespace WebCommon.BaseControllers
     /// Base controller for admin controllers.
     /// </summary>
     [Route("Admin/[controller]")]
-    [TypeFilter(typeof(ExecutionFilterAttribute))]
+    [TypeFilter(typeof(ExecutionFilterAttribute), Arguments = new object[] { AuthenticationLevel.SystemAdmin })]
     public class ManagementController : BaseController { }
 }

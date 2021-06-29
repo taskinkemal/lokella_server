@@ -8,6 +8,6 @@ namespace WebCommon.BaseControllers
     /// <summary>
     /// Sets token to null when it's valid.
     /// </summary>
-    [TypeFilter(typeof(ExecutionFilterAttribute))]
+    [TypeFilter(typeof(ExecutionFilterAttribute), Arguments = new object[] { AuthenticationLevel.NoAuthentication })]
     public class NoAuthController : BaseController { }
 }

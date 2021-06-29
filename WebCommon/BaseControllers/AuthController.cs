@@ -8,6 +8,6 @@ namespace WebCommon.BaseControllers
     /// <summary>
     /// Throws when token is invalid.
     /// </summary>
-    [TypeFilter(typeof(ExecutionFilterAttribute))]
+    [TypeFilter(typeof(ExecutionFilterAttribute), Arguments = new object[] { AuthenticationLevel.User })]
     public class AuthController : BaseController { }
 }

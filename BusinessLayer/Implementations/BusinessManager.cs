@@ -6,6 +6,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using BusinessLayer.Context;
 using BusinessLayer.Interfaces;
+using Common;
 using Common.Interfaces;
 using Microsoft.EntityFrameworkCore;
 using Models.DbModels;
@@ -23,7 +24,7 @@ namespace BusinessLayer.Implementations
         /// </summary>
         /// <param name="context"></param>
         /// <param name="logManager"></param>
-        public BusinessManager(LokellaDbContext context, ILogManager logManager) : base(context, logManager)
+        public BusinessManager(LokellaDbContext context, ICacheManager cacheManager, ILogManager logManager) : base(context, cacheManager, logManager)
         {
         }
 
@@ -31,9 +32,21 @@ namespace BusinessLayer.Implementations
         /// 
         /// </summary>
         /// <returns></returns>
-        public async Task<List<Business>> GetBusinesses()
+        public async Task<List<Business>> GetBusinesses(int userId, AuthenticationLevel authenticationLevel)
         {
-            return await Context.Businesses.ToListAsync();
+            if (authenticationLevel == AuthenticationLevel.SystemAdmin)
+            {
+                return await Context.Businesses.ToListAsync();
+            }
+
+            var businesses = GetUserBusinesses(userId);
+
+            var result = await (from bsn in Context.Businesses
+                                join lnk in businesses on bsn.Id equals lnk
+                                select bsn)
+                                .ToListAsync();
+
+            return result;
         }
 
         /// <summary>
@@ -158,8 +171,15 @@ namespace BusinessLayer.Implementations
             return 1;
         }
 
-        public async Task<List<Models.TransferObjects.CustomerVisit>> GetCustomerVisits(int businessId)
+        public async Task<List<Models.TransferObjects.CustomerVisit>> GetCustomerVisits(int businessId, int userId)
         {
+            var hasRight = await HasRight(businessId, userId, 0);
+
+            if (!hasRight)
+            {
+                throw new Exception("Access Denied");
+            }
+
             var visits = await (from visit in Context.CustomerVisits
                          join customer in Context.Customers on visit.CustomerId equals customer.Id
                          where visit.BusinessId == businessId
@@ -173,6 +193,31 @@ namespace BusinessLayer.Implementations
                 .ToListAsync();
 
             return visits;
+        }
+
+        public async Task<List<User>> GetBusinessUsers(int businessId, int userId)
+        {
+            var hasRight = await HasRight(businessId, userId, 1);
+
+            if (!hasRight)
+            {
+                throw new Exception("Access Denied");
+            }
+
+            var users = await (from busr in Context.BusinessUsers
+                                join usr in Context.Users on busr.UserId equals usr.Id
+                                where busr.BusinessId == businessId
+                                select new User
+                                {
+                                    Id = usr.Id,
+                                    Email = usr.Email,
+                                    FirstName = usr.FirstName,
+                                    LastName = usr.LastName,
+                                    Role = busr.Role
+                                })
+                .ToListAsync();
+
+            return users;
         }
 
         private static byte[] BitmapToBytesCode(Bitmap image)

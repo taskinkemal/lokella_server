@@ -1,4 +1,4 @@
-﻿using Models.TransferObjects;
+﻿using Common;
 
 namespace WebCommon.Interfaces
 {
@@ -10,6 +10,11 @@ namespace WebCommon.Interfaces
         /// <summary>
         /// 
         /// </summary>
-        AuthToken Token { get; set; }
+        int UserId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        AuthenticationLevel AuthenticationLevel { get; set; }
     }
 }

@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
+using Common;
 using Common.Interfaces;
 using Models.DbModels;
 
@@ -10,7 +11,7 @@ namespace BusinessLayer.Interfaces
     /// </summary>
     public interface IBusinessManager : IDependency
     {
-        Task<List<Business>> GetBusinesses();
+        Task<List<Business>> GetBusinesses(int userId, AuthenticationLevel authenticationLevel);
 
         /// <summary>
         /// 
@@ -31,6 +32,8 @@ namespace BusinessLayer.Interfaces
 
         Task<int> VisitBusiness(int businessId, int customerId);
 
-        Task<List<Models.TransferObjects.CustomerVisit>> GetCustomerVisits(int businessId);
+        Task<List<Models.TransferObjects.CustomerVisit>> GetCustomerVisits(int businessId, int userId);
+
+        Task<List<User>> GetBusinessUsers(int businessId, int userId);
     }
 }

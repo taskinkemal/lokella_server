@@ -99,6 +99,9 @@ namespace BusinessLayer.Context
             modelBuilder.Entity<CustomerVisit>()
                 .HasKey(c => new { c.CustomerId, c.BusinessId, c.VisitDate });
 
+            modelBuilder.Entity<BusinessUser>()
+                .HasKey(c => new { c.BusinessId, c.UserId });
+
         }
 
         /// <summary>
@@ -195,5 +198,10 @@ namespace BusinessLayer.Context
         /// 
         /// </summary>
         public DbSet<CustomerVisit> CustomerVisits { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public DbSet<BusinessUser> BusinessUsers { get; set; }
     }
 }

@@ -32,4 +32,10 @@
     <PackageReference Include="Swashbuckle.AspNetCore.Newtonsoft" Version="5.6.3" />
     <PackageReference Include="Microsoft.Extensions.PlatformAbstractions" Version="1.1.0" />
   </ItemGroup>
+  <ItemGroup>
+    <None Remove="Controllers\Admin\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Controllers\Admin\" />
+  </ItemGroup>
 </Project>

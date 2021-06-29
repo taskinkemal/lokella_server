@@ -3,9 +3,10 @@ using System.Threading.Tasks;
 using BusinessLayer.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 using Models.DbModels;
+using WebCommon.Attributes;
 using WebCommon.BaseControllers;
 
-namespace WebApplication.Controllers
+namespace WebApplication.Controllers.Admin
 {
     /// <summary>
     /// 

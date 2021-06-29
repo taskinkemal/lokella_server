@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using WebCommon.Attributes;
-using Models.TransferObjects;
 using WebCommon.Interfaces;
+using Common;
 
 namespace WebCommon.BaseControllers
 {
@@ -14,6 +14,11 @@ namespace WebCommon.BaseControllers
         /// <summary>
         /// 
         /// </summary>
-        public AuthToken Token { get; set; } = null;
+        public int UserId { get; set; } = 0;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public AuthenticationLevel AuthenticationLevel { get; set; } = AuthenticationLevel.NoAuthentication;
     }
 }

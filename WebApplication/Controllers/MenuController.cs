@@ -27,6 +27,13 @@ namespace WebApplication.Controllers
         }
 
         [HttpGet]
+        [Route("/Menu/Businesses/{id}/Parent/{parentId}")]
+        public async Task<List<MenuCategory>> GetSubMenuCategories(int id, int parentId)
+        {
+            return await menuManager.GetBusinessMenuCategories(id, false, parentId);
+        }
+
+        [HttpGet]
         [Route("/Menu/Items/Category/{id}")]
         public async Task<List<MenuItemTo>> GetMenuItems(int id)
         {

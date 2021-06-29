@@ -22,7 +22,7 @@ namespace BusinessLayer.Implementations
         /// <param name="context"></param>
         /// <param name="emailManager"></param>
         /// <param name="logManager"></param>
-        public CustomerManager(LokellaDbContext context, IEmailManager emailManager, ILogManager logManager) : base(context, logManager)
+        public CustomerManager(LokellaDbContext context, IEmailManager emailManager, ICacheManager cacheManager, ILogManager logManager) : base(context, cacheManager, logManager)
         {
             this.emailManager = emailManager;
         }

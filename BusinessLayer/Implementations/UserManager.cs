@@ -25,7 +25,7 @@ namespace BusinessLayer.Implementations
         /// </summary>
         /// <param name="context"></param>
         /// <param name="logManager"></param>
-        public UserManager(LokellaDbContext context, ILogManager logManager) : base(context, logManager)
+        public UserManager(LokellaDbContext context, ICacheManager cacheManager, ILogManager logManager) : base(context, cacheManager, logManager)
         {
         }
 

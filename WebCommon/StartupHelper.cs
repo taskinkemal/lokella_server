@@ -30,6 +30,8 @@ namespace WebCommon
             services.AddScoped<IFilesManager, FilesManager>();
             services.AddScoped<IMenuManager, MenuManager>();
             services.AddScoped<IUserManager, UserManager>();
+            services.AddScoped<IAuthManager, AuthManager>();
+            services.AddScoped<ICacheManager, CacheManager>();
         }
 
         /// <summary>
