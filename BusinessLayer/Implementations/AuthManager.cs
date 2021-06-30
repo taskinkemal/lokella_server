@@ -14,9 +14,9 @@ namespace BusinessLayer.Implementations
         /// <summary>
         /// 
         /// </summary>
-        /// <param name="context"></param>
+        /// <param name="contextProvider"></param>
         /// <param name="logManager"></param>
-        public AuthManager(LokellaDbContext context, ICacheManager cacheManager, ILogManager logManager) : base(context, cacheManager, logManager)
+        public AuthManager(IContextProvider contextProvider, ICacheManager cacheManager, ILogManager logManager) : base(contextProvider, cacheManager, logManager)
         {
         }
 
@@ -25,7 +25,7 @@ namespace BusinessLayer.Implementations
         /// </summary>
         /// <param name="accessToken"></param>
         /// <returns></returns>
-        public async Task<(bool IsAuthenticated, int UserId, AuthenticationLevel Level)> VerifyAccessToken(string accessToken)
+        public async Task<(bool IsAuthenticated, int UserId, AuthenticationLevel Level)> VerifyAccessToken(string accessToken, int? businessId)
         {
             var token = await GetAccessToken(accessToken);
 
@@ -48,7 +48,16 @@ namespace BusinessLayer.Implementations
             }
             else
             {
-                level = AuthenticationLevel.User;
+                if (businessId != null)
+                {
+                    var role = (await Context.BusinessUsers.FirstOrDefaultAsync(b => b.BusinessId == businessId && b.UserId == user.Id))?.Role;
+
+                    level = role == null ? AuthenticationLevel.NoAuthentication : role == 0 ? AuthenticationLevel.User : AuthenticationLevel.UserAdmin;
+                }
+                else
+                {
+                    level = AuthenticationLevel.User;
+                }
             }
 
             return (IsAuthenticated: true, UserId: user.Id, Level: level);

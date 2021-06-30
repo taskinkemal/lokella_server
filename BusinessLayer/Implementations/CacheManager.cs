@@ -13,27 +13,27 @@ namespace BusinessLayer.Implementations
     public class CacheManager : ICacheManager
     {
         private readonly IMemoryCache memoryCache;
-        private LokellaDbContext context;
+        private IContextProvider contextProvider;
 
-        public CacheManager(LokellaDbContext context, IMemoryCache memoryCache)
+        public CacheManager(IContextProvider contextProvider, IMemoryCache memoryCache)
         {
-            this.context = context;
+            this.contextProvider = contextProvider;
             this.memoryCache = memoryCache;
         }
 
         public async Task<List<BusinessUser>> GetBusinessUsers()
         {
-            return await GetInternal("BusinessUsers", () => context.BusinessUsers.ToListAsync());
+            return await GetInternal("BusinessUsers", () => contextProvider.GetContext().BusinessUsers.ToListAsync());
         }
 
         public async Task<List<User>> GetUsers()
         {
-            return await GetInternal("Users", () => context.Users.ToListAsync());
+            return await GetInternal("Users", () => contextProvider.GetContext().Users.ToListAsync());
         }
 
         public async Task<StoredFile> GetFile(int fileId)
         {
-            return await GetInternal("GetFile_" + fileId, () => context.StoredFiles
+            return await GetInternal("GetFile_" + fileId, () => contextProvider.GetContext().StoredFiles
                 .Where(q => q.Id == fileId)
                 .FirstOrDefaultAsync());
         }

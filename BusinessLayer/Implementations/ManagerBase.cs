@@ -15,7 +15,7 @@ namespace BusinessLayer.Implementations
         /// <summary>
         /// 
         /// </summary>
-        protected LokellaDbContext Context { get; }
+        private readonly IContextProvider contextProvider;
 
         /// <summary>
         /// 
@@ -30,14 +30,17 @@ namespace BusinessLayer.Implementations
         /// <summary>
         /// 
         /// </summary>
-        /// <param name="context"></param>
+        /// <param name="contextProvider"></param>
+        /// <param name="cacheManager"></param>
         /// <param name="logManager"></param>
-        protected ManagerBase(LokellaDbContext context, ICacheManager cacheManager, ILogManager logManager)
+        protected ManagerBase(IContextProvider contextProvider, ICacheManager cacheManager, ILogManager logManager)
         {
-            Context = context;
+            this.contextProvider = contextProvider;
             CacheManager = cacheManager;
             LogManager = logManager;
         }
+
+        protected LokellaDbContext Context => contextProvider.GetContext();
 
         protected IQueryable<int> GetUserBusinesses(int userId)
         {

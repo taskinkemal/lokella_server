@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Security.Cryptography;
+using System.Text;
 using System.Threading.Tasks;
 using BusinessLayer.Context;
 using BusinessLayer.Interfaces;
@@ -19,13 +21,15 @@ namespace BusinessLayer.Implementations
     /// </summary>
     public class BusinessManager : ManagerBase, IBusinessManager
     {
+        private readonly IUserManager userManager;
         /// <summary>
         /// 
         /// </summary>
-        /// <param name="context"></param>
+        /// <param name="contextProvider"></param>
         /// <param name="logManager"></param>
-        public BusinessManager(LokellaDbContext context, ICacheManager cacheManager, ILogManager logManager) : base(context, cacheManager, logManager)
+        public BusinessManager(IContextProvider contextProvider, IUserManager userManager, ICacheManager cacheManager, ILogManager logManager) : base(contextProvider, cacheManager, logManager)
         {
+            this.userManager = userManager;
         }
 
         /// <summary>
@@ -171,15 +175,8 @@ namespace BusinessLayer.Implementations
             return 1;
         }
 
-        public async Task<List<Models.TransferObjects.CustomerVisit>> GetCustomerVisits(int businessId, int userId)
+        public async Task<List<Models.TransferObjects.CustomerVisit>> GetCustomerVisits(int businessId)
         {
-            var hasRight = await HasRight(businessId, userId, 0);
-
-            if (!hasRight)
-            {
-                throw new Exception("Access Denied");
-            }
-
             var visits = await (from visit in Context.CustomerVisits
                          join customer in Context.Customers on visit.CustomerId equals customer.Id
                          where visit.BusinessId == businessId
@@ -195,15 +192,8 @@ namespace BusinessLayer.Implementations
             return visits;
         }
 
-        public async Task<List<User>> GetBusinessUsers(int businessId, int userId)
+        public async Task<List<User>> GetBusinessUsers(int businessId)
         {
-            var hasRight = await HasRight(businessId, userId, 1);
-
-            if (!hasRight)
-            {
-                throw new Exception("Access Denied");
-            }
-
             var users = await (from busr in Context.BusinessUsers
                                 join usr in Context.Users on busr.UserId equals usr.Id
                                 where busr.BusinessId == businessId
@@ -218,6 +208,119 @@ namespace BusinessLayer.Implementations
                 .ToListAsync();
 
             return users;
+        }
+
+        public async Task<Models.TransferObjects.BusinessUser> GetBusinessUser(int businessId, int userId)
+        {
+            var user = await (from busr in Context.BusinessUsers
+                               join usr in Context.Users on busr.UserId equals usr.Id
+                               where busr.BusinessId == businessId && busr.UserId == userId
+                               select new Models.TransferObjects.BusinessUser
+                               {
+                                   Id = usr.Id,
+                                   BusinessId = busr.BusinessId,
+                                   Email = usr.Email,
+                                   FirstName = usr.FirstName,
+                                   LastName = usr.LastName,
+                                   Role = busr.Role,
+                                   Password = ""
+                               })
+                .FirstOrDefaultAsync();
+
+            return user;
+        }
+
+        public async Task<int> InsertBusinessUser(Models.TransferObjects.BusinessUser businessUser)
+        {
+            var existingUser = await Context.Users.FirstOrDefaultAsync(u => u.Email == businessUser.Email);
+            var userId = 0;
+
+            if (existingUser == null)
+            {
+                var salt = Guid.NewGuid().ToString();
+
+                userId = await userManager.Insert(new User
+                {
+                    FirstName = businessUser.FirstName,
+                    LastName = businessUser.LastName,
+                    Email = businessUser.Email,
+                    Role = 0,
+                    PasswordHash = SHA1HashValue(businessUser.Password + salt),
+                    PasswordSalt = salt
+                });
+            }
+            else
+            {
+                userId = existingUser.Id;
+            }
+
+            var existingBusinessUser = await Context.BusinessUsers.FirstOrDefaultAsync(u => u.BusinessId == businessUser.BusinessId && u.UserId == userId);
+
+            if (existingBusinessUser != null)
+            {
+                existingBusinessUser.Role = businessUser.Role == 1 ? (short)1 : (short)0;
+
+                Context.BusinessUsers.Update(existingBusinessUser);
+
+                await Context.SaveChangesAsync();
+            }
+            else
+            {
+                Context.BusinessUsers.Add(new BusinessUser
+                {
+                    BusinessId = businessUser.BusinessId,
+                    UserId = userId,
+                    Role = businessUser.Role
+                });
+
+                await Context.SaveChangesAsync();
+            }
+
+            return 1;
+        }
+
+        public async Task<int> UpdateBusinessUser(Models.TransferObjects.BusinessUser businessUser)
+        {
+            var existingBusinessUser = await Context.BusinessUsers.FirstOrDefaultAsync(u => u.BusinessId == businessUser.BusinessId && u.UserId == businessUser.Id);
+            var existingUser = await Context.Users.FirstOrDefaultAsync(u => u.Id == businessUser.Id);
+
+            if (existingBusinessUser != null)
+            {
+                existingBusinessUser.Role = businessUser.Role == 1 ? (short)1 : (short)0;
+
+                Context.BusinessUsers.Update(existingBusinessUser);
+
+                existingUser.FirstName = businessUser.FirstName;
+                existingUser.LastName = businessUser.LastName;
+
+                if (businessUser.Password != null)
+                {
+                    var salt = Guid.NewGuid().ToString();
+                    existingUser.PasswordHash = SHA1HashValue(businessUser.Password + salt);
+                    existingUser.PasswordSalt = salt;
+                }
+
+                Context.Users.Update(existingUser);
+
+                await Context.SaveChangesAsync();
+
+                return 1;
+            }
+
+            return 0;
+        }
+
+        private static readonly Encoding Encoding1252 = Encoding.GetEncoding(1252);
+
+        private static byte[] SHA1HashValue(string s)
+        {
+            byte[] bytes = Encoding1252.GetBytes(s);
+            bytes = Encoding.Unicode.GetBytes(s);
+
+            var sha1 = SHA512.Create();
+            byte[] hashBytes = sha1.ComputeHash(bytes);
+
+            return hashBytes;
         }
 
         private static byte[] BitmapToBytesCode(Bitmap image)

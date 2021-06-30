@@ -32,8 +32,14 @@ namespace BusinessLayer.Interfaces
 
         Task<int> VisitBusiness(int businessId, int customerId);
 
-        Task<List<Models.TransferObjects.CustomerVisit>> GetCustomerVisits(int businessId, int userId);
+        Task<List<Models.TransferObjects.CustomerVisit>> GetCustomerVisits(int businessId);
 
-        Task<List<User>> GetBusinessUsers(int businessId, int userId);
+        Task<List<User>> GetBusinessUsers(int businessId);
+
+        Task<Models.TransferObjects.BusinessUser> GetBusinessUser(int businessId, int userId);
+
+        Task<int> InsertBusinessUser(Models.TransferObjects.BusinessUser businessUser);
+
+        Task<int> UpdateBusinessUser(Models.TransferObjects.BusinessUser businessUser);
     }
 }

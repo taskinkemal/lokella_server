@@ -48,7 +48,8 @@ namespace WebCommon.Attributes
 
             contextManager.BeginTransaction();
 
-            var result = ValidateRequest(context.Controller as IBaseController, accessToken).Result;
+            var businessId = FindBusinessId(context);
+            var result = ValidateRequest(context.Controller as IBaseController, accessToken, businessId).Result;
 
             if (ProceedWithExecution(result.level, authenticationLevel, HasAuthenticateAttribute(context.ActionDescriptor as ControllerActionDescriptor)))
             {
@@ -61,7 +62,7 @@ namespace WebCommon.Attributes
             }
         }
 
-        internal async Task<(AuthenticationLevel level, string errPhrase)> ValidateRequest(IBaseController controller, string accessToken)
+        internal async Task<(AuthenticationLevel level, string errPhrase)> ValidateRequest(IBaseController controller, string accessToken, int? businessId)
         {
             string errPhrase;
             AuthenticationLevel level = AuthenticationLevel.NoAuthentication;
@@ -70,7 +71,7 @@ namespace WebCommon.Attributes
             {
                 if (controller != null)
                 {
-                    var verificationResult = await authManager.VerifyAccessToken(accessToken);
+                    var verificationResult = await authManager.VerifyAccessToken(accessToken, businessId);
 
                     if (verificationResult.IsAuthenticated)
                     {
@@ -122,7 +123,10 @@ namespace WebCommon.Attributes
             t.CurrentUICulture = new System.Globalization.CultureInfo("en-US");
         }
 
-        internal static bool ProceedWithExecution(AuthenticationLevel userAuthenticationLevel, AuthenticationLevel controllerAuthenticationLevel, AuthenticationLevel? methodAuthenticateAttribute)
+        internal static bool ProceedWithExecution(
+            AuthenticationLevel userAuthenticationLevel,
+            AuthenticationLevel controllerAuthenticationLevel,
+            AuthenticationLevel? methodAuthenticateAttribute)
         {
             var requiredLevel = methodAuthenticateAttribute ?? controllerAuthenticationLevel;
             return userAuthenticationLevel >= requiredLevel;
@@ -132,6 +136,16 @@ namespace WebCommon.Attributes
         {
             var attr = descriptor?.MethodInfo?.GetCustomAttributes(true).OfType<AuthenticateAttribute>().FirstOrDefault();
             return attr?.Level;
+        }
+
+        internal static int? FindBusinessId(ActionExecutingContext context)
+        {
+            if (context.Controller is ManagementController && context.ActionArguments.ContainsKey("businessId"))
+            {
+                return (int)context.ActionArguments["businessId"];
+            }
+
+            return null;
         }
     }
 }

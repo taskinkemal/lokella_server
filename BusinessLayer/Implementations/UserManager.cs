@@ -23,9 +23,9 @@ namespace BusinessLayer.Implementations
         /// <summary>
         /// 
         /// </summary>
-        /// <param name="context"></param>
+        /// <param name="contextProvider"></param>
         /// <param name="logManager"></param>
-        public UserManager(LokellaDbContext context, ICacheManager cacheManager, ILogManager logManager) : base(context, cacheManager, logManager)
+        public UserManager(IContextProvider contextProvider, ICacheManager cacheManager, ILogManager logManager) : base(contextProvider, cacheManager, logManager)
         {
         }
 
@@ -54,15 +54,11 @@ namespace BusinessLayer.Implementations
 
         public async Task<int> Insert(User user)
         {
-            //DECLARE @salt UNIQUEIDENTIFIER=NEWID()
+            var entity = Context.Users.Add(user);
 
-            //insert into sa_lokella.Users values(
-            //    N'Kemal', N'Taskin', 1, N'kemal.n.taskin@gmail.com', HASHBYTES('SHA2_512', 'kemal123' + CAST(@salt AS NVARCHAR(36))), @salt)
+            await Context.SaveChangesAsync();
 
-            await Task.Delay(1);
-
-            return 1;
-
+            return entity.Entity.Id;
         }
 
         private static string GenerateToken()

@@ -6,6 +6,6 @@ namespace BusinessLayer.Interfaces
 {
     public interface IAuthManager : IDependency
     {
-        Task<(bool IsAuthenticated, int UserId, AuthenticationLevel Level)> VerifyAccessToken(string accessToken);
+        Task<(bool IsAuthenticated, int UserId, AuthenticationLevel Level)> VerifyAccessToken(string accessToken, int? businessId);
     }
 }

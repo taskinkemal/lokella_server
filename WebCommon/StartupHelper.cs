@@ -3,6 +3,7 @@ using BusinessLayer.Interfaces;
 using Common;
 using Common.Implementations;
 using Common.Interfaces;
+using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Newtonsoft.Json;
@@ -23,15 +24,17 @@ namespace WebCommon
             services.AddSingleton<ILogManager, LogManager>();
             services.AddSingleton<ILogAdapter, LogAdapter>();
             services.AddSingleton<IEmailManager, EmailManager>();
+            services.AddSingleton<IBusinessManager, BusinessManager>();
+            services.AddSingleton<ICustomerManager, CustomerManager>();
+            services.AddSingleton<IFilesManager, FilesManager>();
+            services.AddSingleton<IMenuManager, MenuManager>();
+            services.AddSingleton<IUserManager, UserManager>();
+            services.AddSingleton<IAuthManager, AuthManager>();
+            services.AddSingleton<ICacheManager, CacheManager>();
+            services.AddSingleton<IContextProvider, ContextProvider>();
+            services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
 
             services.AddScoped<IContextManager, ContextManager>();
-            services.AddScoped<IBusinessManager, BusinessManager>();
-            services.AddScoped<ICustomerManager, CustomerManager>();
-            services.AddScoped<IFilesManager, FilesManager>();
-            services.AddScoped<IMenuManager, MenuManager>();
-            services.AddScoped<IUserManager, UserManager>();
-            services.AddScoped<IAuthManager, AuthManager>();
-            services.AddScoped<ICacheManager, CacheManager>();
         }
 
         /// <summary>

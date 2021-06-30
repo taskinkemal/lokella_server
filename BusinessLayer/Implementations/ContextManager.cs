@@ -1,6 +1,5 @@
 ﻿using BusinessLayer.Context;
 using BusinessLayer.Interfaces;
-using Common.Interfaces;
 using Microsoft.EntityFrameworkCore.Storage;
 
 namespace BusinessLayer.Implementations
@@ -8,7 +7,7 @@ namespace BusinessLayer.Implementations
     /// <summary>
     /// 
     /// </summary>
-    public class ContextManager : ManagerBase, IContextManager
+    public class ContextManager : IContextManager
     {
 
         /// <summary>
@@ -16,13 +15,16 @@ namespace BusinessLayer.Implementations
         /// </summary>
         private IDbContextTransaction transaction;
 
+        private LokellaDbContext context;
+
         /// <summary>
         /// 
         /// </summary>
         /// <param name="context"></param>
         /// <param name="logManager"></param>
-        public ContextManager(LokellaDbContext context, ICacheManager cacheManager, ILogManager logManager) : base(context, cacheManager, logManager)
+        public ContextManager(LokellaDbContext context)
         {
+            this.context = context;
         }
 
         /// <summary>
@@ -31,7 +33,7 @@ namespace BusinessLayer.Implementations
         /// <returns></returns>
         public void BeginTransaction()
         {
-            transaction = Context.Database.BeginTransaction();
+            transaction = context.Database.BeginTransaction();
         }
 
         /// <summary>

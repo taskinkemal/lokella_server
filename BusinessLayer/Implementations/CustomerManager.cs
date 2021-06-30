@@ -19,10 +19,10 @@ namespace BusinessLayer.Implementations
         /// <summary>
         /// 
         /// </summary>
-        /// <param name="context"></param>
+        /// <param name="contextProvider"></param>
         /// <param name="emailManager"></param>
         /// <param name="logManager"></param>
-        public CustomerManager(LokellaDbContext context, IEmailManager emailManager, ICacheManager cacheManager, ILogManager logManager) : base(context, cacheManager, logManager)
+        public CustomerManager(IContextProvider contextProvider, IEmailManager emailManager, ICacheManager cacheManager, ILogManager logManager) : base(contextProvider, cacheManager, logManager)
         {
             this.emailManager = emailManager;
         }
