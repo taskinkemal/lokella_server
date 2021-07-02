@@ -61,6 +61,11 @@ namespace BusinessLayer.Implementations
             return entity.Entity.Id;
         }
 
+        public async Task<User> GetUser(int userId)
+        {
+            return await Context.Users.FirstOrDefaultAsync(u => u.Id == userId);
+        }
+
         private static string GenerateToken()
         {
             const int length = 64;

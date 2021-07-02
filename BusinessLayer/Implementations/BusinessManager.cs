@@ -227,6 +227,24 @@ namespace BusinessLayer.Implementations
                                })
                 .FirstOrDefaultAsync();
 
+            if (user == null)
+            {
+                var userEntity = await userManager.GetUser(userId);
+                if (userEntity != null && userEntity.Role == 1)
+                {
+                    user = new Models.TransferObjects.BusinessUser
+                    {
+                        Id = userEntity.Id,
+                        BusinessId = businessId,
+                        Email = userEntity.Email,
+                        FirstName = userEntity.FirstName,
+                        LastName = userEntity.LastName,
+                        Role = userEntity.Role,
+                        Password = ""
+                    };
+                }
+            }
+
             return user;
         }
 
@@ -301,6 +319,55 @@ namespace BusinessLayer.Implementations
                 }
 
                 Context.Users.Update(existingUser);
+
+                await Context.SaveChangesAsync();
+
+                return 1;
+            }
+
+            return 0;
+        }
+
+        public async Task<int> UpdateBusiness(Business business)
+        {
+            var existingBusiness = await Context.Businesses.FirstOrDefaultAsync(b => b.Id == business.Id);
+
+            if (existingBusiness != null)
+            {
+                existingBusiness.Category = business.Category;
+                existingBusiness.Level = business.Level;
+                existingBusiness.Name = business.Name;
+                existingBusiness.LogoId = business.LogoId;
+                existingBusiness.BackgroundColor = business.BackgroundColor;
+                existingBusiness.FontColor = business.FontColor;
+                existingBusiness.MenuSectionColor = business.MenuSectionColor;
+
+                Context.Businesses.Update(existingBusiness);
+
+                await Context.SaveChangesAsync();
+
+                return 1;
+            }
+
+            return 0;
+        }
+
+        public async Task<int> UpdateBusinessInfo(BusinessInfo businessInfo)
+        {
+            var existingBusinessInfo = await Context.BusinessInfos.FirstOrDefaultAsync(b => b.Id == businessInfo.Id);
+
+            if (existingBusinessInfo != null)
+            {
+                existingBusinessInfo.Address = businessInfo.Address;
+                existingBusinessInfo.City = businessInfo.City;
+                existingBusinessInfo.PhoneNumber = businessInfo.PhoneNumber;
+                existingBusinessInfo.PostCode = businessInfo.PostCode;
+                existingBusinessInfo.FullName = businessInfo.FullName;
+                existingBusinessInfo.WebSite = businessInfo.WebSite;
+                existingBusinessInfo.Facebook = businessInfo.Facebook;
+                existingBusinessInfo.Instagram = businessInfo.Instagram;
+
+                Context.BusinessInfos.Update(existingBusinessInfo);
 
                 await Context.SaveChangesAsync();
 

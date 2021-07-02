@@ -11,5 +11,7 @@ namespace BusinessLayer.Interfaces
         Task<string> Login(Models.TransferObjects.TokenRequest tokenRequest);
 
         Task<int> Insert(User user);
+
+        Task<User> GetUser(int userId);
     }
 }

@@ -41,5 +41,9 @@ namespace BusinessLayer.Interfaces
         Task<int> InsertBusinessUser(Models.TransferObjects.BusinessUser businessUser);
 
         Task<int> UpdateBusinessUser(Models.TransferObjects.BusinessUser businessUser);
+
+        Task<int> UpdateBusiness(Business business);
+
+        Task<int> UpdateBusinessInfo(BusinessInfo businessInfo);
     }
 }

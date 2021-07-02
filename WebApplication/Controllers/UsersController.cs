@@ -28,15 +28,6 @@ namespace WebApplication.Controllers
             this.userManager = userManager;
         }
 
-        [HttpGet]
-        public List<int> Get()
-        {
-            var list = new List<int>();
-            list.Add(4);
-            list.Add(9);
-            return list;
-        }
-
         [HttpPost]
         [ProducesResponseType(typeof(string), (int)HttpStatusCode.OK)]
         [Authenticate(Level = Common.AuthenticationLevel.NoAuthentication)]
@@ -45,6 +36,12 @@ namespace WebApplication.Controllers
             var token = await userManager.Login(tokenRequest);
 
             return ControllerHelper.CreateResponse(token);
+        }
+
+        [HttpGet]
+        public async Task<User> Get()
+        {
+            return await userManager.GetUser(UserId);
         }
     }
 }
