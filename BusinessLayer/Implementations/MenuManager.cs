@@ -25,7 +25,8 @@ namespace BusinessLayer.Implementations
         {
             return await Context.MenuCategories
                 .Where(q => q.BusinessId == businessId && (fetchAll || q.ParentId == parentId))
-                .OrderBy(q => q.ItemOrder)
+                .OrderBy(q => q.ParentId)
+                .ThenBy(q => q.ItemOrder)
                 .ToListAsync();
         }
 
@@ -96,6 +97,104 @@ namespace BusinessLayer.Implementations
             }
 
             return result.ToList();
+        }
+
+        public async Task<int> InsertCategory(MenuCategory category)
+        {
+            if (category.ParentId != null)
+            {
+                var parentCategory = await Context.MenuCategories.FirstOrDefaultAsync(m => m.Id == category.ParentId);
+
+                if (parentCategory == null || parentCategory.BusinessId != category.BusinessId)
+                {
+                    return 0;
+                }
+            }
+
+            var existingList = await Context.MenuCategories.Where(m => m.BusinessId == category.BusinessId && m.ParentId == category.ParentId).ToListAsync();
+
+            var maxOrder = 0;
+
+            if (existingList.Any())
+            {
+                maxOrder = existingList.Max(m => m.ItemOrder);
+            }
+
+            var entity = await Context.AddAsync(new MenuCategory
+            {
+                Name = category.Name,
+                BusinessId = category.BusinessId,
+                ParentId = category.ParentId,
+                ItemOrder = maxOrder + 1
+            });
+
+            await Context.SaveChangesAsync();
+
+            return entity.Entity.Id;
+        }
+
+        public async Task<int> UpdateCategory(MenuCategory category)
+        {
+            var existing = await Context.MenuCategories.FirstOrDefaultAsync(m => m.Id == category.Id);
+
+            if (existing != null)
+            {
+                existing.Name = category.Name;
+
+                Context.Update(existing);
+
+                await Context.SaveChangesAsync();
+
+                return 1;
+            }
+
+            return 0;
+        }
+
+        public async Task<int> ReorderCategories(int businessId, Models.TransferObjects.MenuCategoryList list)
+        {
+            var allCategories = await Context.MenuCategories.Where(c => c.BusinessId == businessId).ToListAsync();
+
+            var existingList = allCategories.Where(c => list.Items.Contains(c.Id)).ToList();
+
+            var parents = existingList.GroupBy(l => l.ParentId).Select(g => g.Key).ToList();
+
+            if (existingList.Count != list.Items.Count
+                || existingList.Any(l => l.BusinessId != businessId)
+                || parents.Count != 1)
+            {
+                return 0;
+            }
+
+            for (var i = 0; i < list.Items.Count; i++)
+            {
+                var item = await Context.MenuCategories.FirstOrDefaultAsync(c => c.Id == list.Items[i]);
+
+                if (item != null)
+                {
+                    item.ItemOrder = i;
+                    Context.Update(item);
+                }
+            }
+
+            await Context.SaveChangesAsync();
+
+            return 1;
+        }
+
+        public async Task<List<CatalogAdditive>> GetAdditives()
+        {
+            return await Context.CatalogAdditives.OrderBy(c => c.Id).ToListAsync();
+        }
+
+        public async Task<List<CatalogAllergy>> GetAllergies()
+        {
+            return await Context.CatalogAllergies.OrderBy(c => c.Id).ToListAsync();
+        }
+
+        public async Task<List<CatalogMenuItemTag>> GetTags()
+        {
+            return await Context.CatalogMenuItemTags.OrderBy(c => c.Id).ToListAsync();
         }
     }
 }

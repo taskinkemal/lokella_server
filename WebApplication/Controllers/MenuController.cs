@@ -40,6 +40,25 @@ namespace WebApplication.Controllers
             return await menuManager.GetMenuItems(id);
         }
 
+        [HttpGet]
+        [Route("/Menu/Additives")]
+        public async Task<List<CatalogAdditive>> GetAdditives()
+        {
+            return await menuManager.GetAdditives();
+        }
 
+        [HttpGet]
+        [Route("/Menu/Allergies")]
+        public async Task<List<CatalogAllergy>> GetAllergies()
+        {
+            return await menuManager.GetAllergies();
+        }
+
+        [HttpGet]
+        [Route("/Menu/Tags")]
+        public async Task<List<CatalogMenuItemTag>> GetTags()
+        {
+            return await menuManager.GetTags();
+        }
     }
 }
